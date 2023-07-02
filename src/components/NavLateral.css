@@ -1,5 +1,6 @@
 .nav-lateral {
   align-items: center;
+  background-color: white;
   border: solid 1px black;
   border-radius: 0 15px 15px 0;
   display: flex;
@@ -8,7 +9,7 @@
   justify-content: space-evenly;
   left: 0;
   position: fixed;
-  top: 40%;
+  top: 30%;
   transition: all 0.3s;
   width: 63px;
   z-index: 100;

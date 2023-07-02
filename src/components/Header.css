@@ -16,7 +16,7 @@
 .avata, .navegacao {
   align-items: center;
   display: flex;
-  margin: 10px;
+  margin: 10px 60px;
 }
 
 .header-navegacao {
