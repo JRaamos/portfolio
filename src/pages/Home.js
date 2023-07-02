@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import HomeConteudo from '../components/HomeConteudo';
 import NavLateral from '../components/NavLateral';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       </header>
       <main>
         <NavLateral />
+        <HomeConteudo />
       </main>
     </div>
   );
