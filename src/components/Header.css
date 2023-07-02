@@ -1,0 +1,26 @@
+.header-contain {
+  border-bottom: 1px solid #03167e;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.img-gravatar {
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
+
+.avata, .navegacao {
+  align-items: center;
+  display: flex;
+  margin: 10px;
+}
+
+.header-navegacao {
+  display: flex;
+  font-size: 19px;
+  padding: 10px;
+}
