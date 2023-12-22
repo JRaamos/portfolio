@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
-import NotFound from './NotFound';
+import NotFound from './pages/NotFound';
 import PortfolioProvider from './context/PortfolioProvider';
 
 function App() {

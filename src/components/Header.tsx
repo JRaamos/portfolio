@@ -3,7 +3,10 @@ import ThemeToggleButton from './ThemeToggleButton';
 
 export default function Header() {
   return (
-    <div>
+    <div
+      className="h-12 w-ful
+      flex justify-end items-center px-4"
+    >
       <ThemeToggleButton />
     </div>
   );
