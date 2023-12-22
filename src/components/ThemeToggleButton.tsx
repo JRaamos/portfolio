@@ -1,17 +1,30 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import PortfolioContext from '../context/PortfolioContext';
 
 function ThemeToggleButton() {
+  const { setTheme } = useContext(PortfolioContext);
+
   const [isToggled, setIsToggled] = useState<boolean>(false);
 
-  const toggle = useCallback(() => {
+  const toggle = () => {
     setIsToggled((toggled) => !toggled);
-  }, []);
+  };
 
+  const handleTheme = () => {
+    if (isToggled) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
   return (
     <button
-      onClick={ toggle }
+      onClick={ () => {
+        toggle();
+        handleTheme();
+      } }
       type="button"
       aria-label="Toggle theme"
 
