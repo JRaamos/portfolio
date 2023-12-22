@@ -13,7 +13,7 @@ function ThemeToggleButton() {
       } }
       type="button"
       aria-label="Toggle theme"
-
+      className="w-12 h-12 flex items-center"
     >
       <FontAwesomeIcon
         icon={ theme === 'dark' ? faSun : faMoon }

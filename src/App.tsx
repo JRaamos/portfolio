@@ -4,6 +4,7 @@ import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import NotFound from './pages/NotFound';
 import PortfolioProvider from './context/PortfolioProvider';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/projects" element={ <Projects /> } />
-        <Route path="/contacts" element={ <Contacts /> } />
+        <Route path="/contact" element={ <Contacts /> } />
         <Route path="/*" element={ <NotFound /> } />
       </Routes>
     </PortfolioProvider>
