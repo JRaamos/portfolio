@@ -7,4 +7,6 @@ export type PortfolioProviderProps = {
 export type PortfolioContextType = {
   theme: string;
   setTheme: Dispatch<SetStateAction<string>>
+  language: string;
+  setLanguage: Dispatch<SetStateAction<string>>
 };

@@ -5,6 +5,7 @@ import { PortfolioProviderProps } from '../types/Portfolio.type';
 function PortfolioProvider({ children }:
 PortfolioProviderProps) {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
+  const [language, setLanguage] = useState(localStorage.getItem('language') ?? 'pt');
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -15,11 +16,14 @@ PortfolioProviderProps) {
     root.classList.add(theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
+
   return (
     <PortfolioContext.Provider
       value={ {
         theme,
         setTheme,
+        language,
+        setLanguage,
       } }
     >
       { children }

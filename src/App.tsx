@@ -4,7 +4,6 @@ import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import NotFound from './pages/NotFound';
 import PortfolioProvider from './context/PortfolioProvider';
-import About from './components/About';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path="/*" element={ <NotFound /> } />
       </Routes>
     </PortfolioProvider>
-
   );
 }
 
