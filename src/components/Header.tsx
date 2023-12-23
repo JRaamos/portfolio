@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ThemeToggleButton from './ThemeToggleButton';
 import Hamburger from './Hamburger';
 import { useWindowSize } from '../hooks/useWindowSize';
+import Lenguage from './Lenguage';
 
 export default function Header() {
   const location = useLocation();
@@ -48,7 +49,12 @@ export default function Header() {
           )
 }
       </div>
-      { width > 768 && <ThemeToggleButton />}
+      { width > 768 && (
+        <div className="flex justify-between w-52 mx-3">
+          <Lenguage />
+          <ThemeToggleButton />
+        </div>
+      )}
     </div>
   );
 }

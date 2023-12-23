@@ -4,6 +4,8 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PortfolioContext from '../context/PortfolioContext';
+import ThemeToggleButton from './ThemeToggleButton';
+import Lenguage from './Lenguage';
 
 function HamburgerMenu() {
   const location = useLocation();
@@ -50,29 +52,32 @@ function HamburgerMenu() {
       >
 
         {isOpen && (
-
-          <nav
+          <div
             className="absolute left-0 top-0 h-full
-         w-60 bg-slate-300 shadow-lg flex flex-col items-center py-4
-"
+         w-60 bg-slate-300 shadow-lg flex flex-col items-center py-4"
           >
 
-            <Link to="/">
-              <p>{t('home')}</p>
-            </Link>
+            <ThemeToggleButton />
+            <nav>
 
-            { location.pathname === '/' && (
-              <a href="#about">{t('about')}</a>
-            )}
+              <Link to="/">
+                <p>{t('home')}</p>
+              </Link>
 
-            <Link to="/projects">
-              <p>{t('projects')}</p>
-            </Link>
+              { location.pathname === '/' && (
+                <a href="#about">{t('about')}</a>
+              )}
 
-            <Link to="/contact">
-              <p>{t('contact')}</p>
-            </Link>
-          </nav>
+              <Link to="/projects">
+                <p>{t('projects')}</p>
+              </Link>
+
+              <Link to="/contact">
+                <p>{t('contact')}</p>
+              </Link>
+            </nav>
+            <Lenguage />
+          </div>
         )}
       </div>
     </div>
