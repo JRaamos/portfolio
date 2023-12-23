@@ -25,6 +25,7 @@
   "include": [
     "src",
     "locales",
+    "copy-locales.js",
     "i18n.ts"
   ],
   "references": [
