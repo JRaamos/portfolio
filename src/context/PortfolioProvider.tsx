@@ -6,6 +6,7 @@ function PortfolioProvider({ children }:
 PortfolioProviderProps) {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
   const [language, setLanguage] = useState(localStorage.getItem('language') ?? 'pt');
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -24,6 +25,8 @@ PortfolioProviderProps) {
         setTheme,
         language,
         setLanguage,
+        isOpen,
+        setIsOpen,
       } }
     >
       { children }

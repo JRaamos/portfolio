@@ -9,4 +9,6 @@ export type PortfolioContextType = {
   setTheme: Dispatch<SetStateAction<string>>
   language: string;
   setLanguage: Dispatch<SetStateAction<string>>
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>
 };
