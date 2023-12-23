@@ -8,6 +8,7 @@ export default {
     extend: {
       boxShadow: {
         '3xl': '10px 25px 60px -5px rgba(0, 0, 0, 0.3)',
+        '4xl': '10px 20px 60px -5px rgba(173, 255, 47, 0.4)',
       },
       keyframes: {
         fadeIn: {

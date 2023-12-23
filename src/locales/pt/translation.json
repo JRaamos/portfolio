@@ -2,7 +2,9 @@
   "home": "Início",
   "about": "Sobre Mim",
   "projects": "Projetos",
-  "contact": "Contato",
   "presentation": "Olá, eu sou o Jonathan Febraio",
-  "introduction": " Sou um Desenvolverdor Web que escreve codigos limpo, elgante e eficiente, apaixonado por tecnologia, sempre em busca de novos conhecimentos e desafios..."
+  "contact": "Contato",
+  "introduction": " Sou um Desenvolverdor Web que escreve codigos limpo, elgante e eficiente, apaixonado por tecnologia, sempre em busca de novos conhecimentos e desafios...",
+  "button": "Contrate-me",
+  "cv": "Baixar CV"
 }
