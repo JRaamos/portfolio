@@ -24,7 +24,8 @@
   },
   "include": [
     "src",
-    "locales"
+    "locales",
+    "i18n.ts"
   ],
   "references": [
     {
