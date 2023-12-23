@@ -1,14 +1,11 @@
-import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import About from '../components/About';
 import NavLeft from '../components/NavLeft';
-import PortfolioContext from '../context/PortfolioContext';
 import euDev from '../images/eu-sorrindo.png';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 function Home() {
-  const { setIsOpen } = useContext(PortfolioContext);
   const { t } = useTranslation();
   const [width] = useWindowSize();
 
