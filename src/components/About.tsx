@@ -13,9 +13,44 @@ function About() {
       <section
         className="flex flex-col justify-center items-center w-2/3"
       >
-        <p className="text-lg italic font-semibold  w-full">{t('aboutTextInto')}</p>
-        <p className=" w-full font-mono">{t('aboutText')}</p>
+        <div>
+          <p className="text-lg italic font-semibold  w-full">{t('aboutTextInto')}</p>
+          <p className=" w-full font-mono">{t('aboutText')}</p>
+        </div>
+        <div>
+          <p className="text-lg italic font-semibold  w-full">{t('aboutCareerInto')}</p>
+          <p className=" w-full font-mono">{t('aboutTextCarrer')}</p>
+        </div>
+        <div>
+          <p className="text-lg italic font-semibold  w-full">
+            {t('aboutExperienceInto')}
+          </p>
+          <p className=" w-full font-mono">{t('aboutTextExperience')}</p>
+        </div>
+        <div>
+          <p className="text-lg italic font-semibold  w-full">
+            {t('aboutObjectivesInto')}
+          </p>
+          <p className=" w-full font-mono">{t('aboutTextObjectives')}</p>
+        </div>
+        <div>
+          <p className="text-lg italic font-semibold  w-full">
+            {t('aboutcuriosityInto')}
+          </p>
+          <p className=" w-full font-mono">{t('aboutTextCuriosity')}</p>
+        </div>
+        <div className="flex w-full justify-center items-center">
+          <p className="font-mono w-2/3">{t('conect')}</p>
+          <button
+            className="mx-2  hadow-4xl bg-amber-400
+             dark:text-slate-900 p-1 rounded-lg h-12"
+          >
+            {t('button')}
+
+          </button>
+        </div>
       </section>
+
     </div>
   );
 }

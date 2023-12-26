@@ -9,7 +9,7 @@ function NavLeft() {
       className=" h-52 w-16 border-collapse rounded-r-lg
       shadow-3xl flex flex-col justify-around items-center
       fixed left-0 top-1/2 transform -translate-y-1/2
-       bg-slate-700 dark:bg-slate-300 dark:shadow-slate-800"
+       bg-slate-700 dark:bg-slate-300 dark:shadow-slate-800 max-sm:w-10 max-sm:h-44"
     >
       <Link
         to="https://www.instagram.com/jonathan_febraio/"
@@ -18,7 +18,7 @@ function NavLeft() {
       >
         <FontAwesomeIcon
           icon={ faInstagram }
-          className="text-slate-100 dark:text-slate-900 h-14 w-14"
+          className="text-slate-100 dark:text-slate-900 h-14 w-14 max-sm:w-9"
         />
       </Link>
       <Link
@@ -28,13 +28,13 @@ function NavLeft() {
       >
         <FontAwesomeIcon
           icon={ faLinkedin }
-          className="text-slate-100 dark:text-slate-900 h-14 w-14"
+          className="text-slate-100 dark:text-slate-900 h-14 w-14 max-sm:w-9"
         />
       </Link>
       <Link to="https://github.com/JRaamos" target="_blank" rel="noreferrer">
         <FontAwesomeIcon
           icon={ faGithub }
-          className="text-slate-100 dark:text-slate-900 h-14 w-14"
+          className="text-slate-100 dark:text-slate-900 h-14 w-14 max-sm:w-9"
         />
       </Link>
     </nav>
