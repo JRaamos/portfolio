@@ -48,7 +48,7 @@ function HamburgerMenu() {
       <div
         id="hamburger-menu"
         className={ `${isOpen ? menuAnimation : 'hidden-menu'}
-       absolute left-0 top-0 w-52 bg-slate-300 shadow-lg h-[calc(36%)]
+       absolute left-0 top-0 w-52 bg-slate-300 shadow-lg h-[calc(100%)]
         flex flex-col items-start py-4` }
       >
 
