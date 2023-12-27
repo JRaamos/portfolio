@@ -13,6 +13,7 @@ function HamburgerMenu() {
   const { isOpen, setIsOpen } = useContext(PortfolioContext);
 
   const menuAnimation = isOpen ? 'animate-fadeIn' : 'animate-fadeOut';
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const menuElement = document.getElementById('hamburger-menu');
@@ -47,36 +48,44 @@ function HamburgerMenu() {
       <div
         id="hamburger-menu"
         className={ `${isOpen ? menuAnimation : 'hidden-menu'}
-       absolute left-0 top-0 h-full w-60 bg-slate-300 shadow-lg
+       absolute left-0 top-0 w-52 bg-slate-300 shadow-lg h-[calc(36%)]
         flex flex-col items-start py-4` }
       >
 
         {isOpen && (
           <div
             className="absolute left-0 top-0 h-full
-         w-60 bg-slate-300 shadow-lg flex flex-col items-center py-4"
+         w-60  flex flex-col items-center py-4"
           >
+            <div className="flex justify-between w-44 mx-3">
+              <Lenguage />
+              <ThemeToggleButton />
+            </div>
 
-            <ThemeToggleButton />
-            <nav>
+            <nav className=" mt-10">
 
               <Link to="/">
-                <p>{t('home')}</p>
+                <p className=" font-mono text-xl font-black m-1">{t('home')}</p>
               </Link>
 
               { location.pathname === '/' && (
-                <a href="#about">{t('about')}</a>
+                <a
+                  href="#about"
+                  className=" font-mono text-xl font-black m-1"
+                >
+                  {t('about')}
+
+                </a>
               )}
 
               <Link to="/projects">
-                <p>{t('projects')}</p>
+                <p className=" font-mono text-xl font-black m-1">{t('projects')}</p>
               </Link>
 
               <Link to="/contact">
-                <p>{t('contact')}</p>
+                <p className=" font-mono text-xl font-black m-1">{t('contact')}</p>
               </Link>
             </nav>
-            <Lenguage />
           </div>
         )}
       </div>

@@ -13,7 +13,7 @@ function Lenguage() {
     <div className="flex">
       <button
         type="button"
-        className={ `w-12 h-12 flex items-center
+        className={ `w-12 h-12 flex items-center mr-3
            ${
              language === 'pt'
                ? 'bg-amber-200'

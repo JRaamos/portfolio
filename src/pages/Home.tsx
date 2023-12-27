@@ -14,17 +14,20 @@ function Home() {
       <main
         className="flex
       m-auto justify-around h-[calc(80vh-4rem)] items-center
-       max-md:flex-col max-md: max-screen w-full"
+       max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]"
 
       >
-        <section className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4">
+        <section
+          className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4
+  "
+        >
           <img
             src={ euDev }
             alt="Jonathan Febraio"
-            className="rounded-full mb-5"
+            className="rounded-full mb-5 "
           />
         </section>
-        <section className="max-md:w-[calc(80%)]  w-1/2 pl-8">
+        <section className="max-md:w-[calc(80%)]  w-1/2 pl-8  ">
 
           <p className="text-3xl font-mono">{t('presentation')}</p>
           <p className="font-mono">{t('introduction')}</p>
