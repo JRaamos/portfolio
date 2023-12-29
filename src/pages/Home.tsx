@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import Header from '../components/Header';
 import About from '../components/About';
 import NavLeft from '../components/NavLeft';
 import euDev from '../images/eu-sorrindo.png';
+import { fetchApirepoGithub } from '../utils/fetchApi';
 
 function Home() {
   const { t } = useTranslation();

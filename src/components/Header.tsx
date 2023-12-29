@@ -38,7 +38,7 @@ export default function Header() {
               )}
 
               <Link to="/projects">
-                <p>{t('projects')}</p>
+                <p>{t('project')}</p>
               </Link>
 
               <Link to="/contact">

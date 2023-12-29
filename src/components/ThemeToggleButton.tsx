@@ -1,15 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSun,
   faMoon,
 } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from 'react-i18next';
 import PortfolioContext from '../context/PortfolioContext';
 
 function ThemeToggleButton() {
-  const { setTheme, theme, language, setLanguage } = useContext(PortfolioContext);
-  const { i18n } = useTranslation();
+  const { setTheme, theme } = useContext(PortfolioContext);
 
   return (
     <div>
