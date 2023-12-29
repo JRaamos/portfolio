@@ -18,6 +18,7 @@
   "aboutcuriosityInto": "Curiosity:",
   "aboutTextCuriosity": "Passion for superheroes: When I'm not encoding, you will probably find me plunged into the universe of superheroes, exploring your stories and lessons. I believe that, like superheroes, every developer has a unique superpower: the ability to create and transform ideas into reality.",
   "conect": "If you are looking for a developer who is dedicated, creative and always ready to learn, I would be delighted to connect with you. Let's create something incredible together!",
+  "projectPageTitle": "Projects",
   "projects": {
     "project0": {
       "description": "The Systema scheduling project is a full stack application developed to facilitate scheduling services in a barbershop. It allows customers to conveniently book appointments for haircuts, shaves, and other services offered by the barbershop. "

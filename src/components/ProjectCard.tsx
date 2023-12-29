@@ -16,20 +16,25 @@ function ProjectCard({ projectId, title, img, linkSite, github, techs }:
 
   return (
     <div
-      className="flex justify-center flex-col dark:border-white w-4/5 h-2/5
-     border-black border-2"
+      className="w-11/12 bg-slate-300
+       dark:bg-slate-600 rounded-2xl mt-6 p-5 flex flex-col"
     >
-      <h1>{title}</h1>
-      <div className="flex justify-around">
+      <h1
+        className="text-2xl font-semibold mb-4 mx-5"
+      >
+        {title}
+      </h1>
+      <div className="flex justify-around max-lg:flex-col">
         <img
           src={ img }
           alt={ title }
-          className="w-5/12
-          shadow-red-200 shadow-md rounded-2xl"
+          className="w-[60vh]
+        rounded-2xl m-4 h-[40vh] max-[1300px]:w-[50vh] max-[1300px]:h-[40vh]
+        max-lg:w-[60vh] max-lg:h-[40vh] max-lg:m-auto"
         />
 
-        <div className="w-1/2 flex flex-col">
-          <p className="border-2 border-black ">{description}</p>
+        <div className="w-full flex flex-col m-4 max-lg:m-1">
+          <p className="font-mono text-xl max-[1300px]:text-lg m-auto">{description}</p>
           <div className="flex">
             <Link to={ github } target="_blank" rel="noreferrer">
               <button
@@ -55,7 +60,6 @@ function ProjectCard({ projectId, title, img, linkSite, github, techs }:
           <p>{techs}</p>
         </div>
       </div>
-
     </div>
   );
 }
