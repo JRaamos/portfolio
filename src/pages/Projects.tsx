@@ -10,7 +10,7 @@ function Projects() {
     <div>
       <Header />
       {/* <h1>{t('projectPageTitle')}</h1> */}
-      <div className="flex justify-center items-center max-lg:flex-row">
+      <div className="flex justify-center items-center flex-col">
         {
         projectsDetails.map((project, index) => (
           <ProjectCard

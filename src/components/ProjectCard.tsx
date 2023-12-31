@@ -7,9 +7,11 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
+ type Tech = { name: string, image: string };
+
 function ProjectCard({ projectId, title, img, linkSite, github, techs }:
 { projectId: number, title: string, img: string,
-  linkSite: string, github: string, techs: string }) {
+  linkSite: string, github: string, techs: Tech[] }) {
   const { t } = useTranslation();
 
   const description = t(`projects.project${projectId}.description`);
@@ -34,8 +36,8 @@ function ProjectCard({ projectId, title, img, linkSite, github, techs }:
         />
 
         <div className="w-full flex flex-col m-4 max-lg:m-1">
-          <p className="font-mono text-xl max-[1300px]:text-lg m-auto">{description}</p>
-          <div className="flex">
+          <p className="font-mono text-xl max-[1300px]:text-lg">{description}</p>
+          <div className="flex m-2">
             <Link to={ github } target="_blank" rel="noreferrer">
               <button
                 className="flex flex-col items-center w-20 m-2"
@@ -57,7 +59,28 @@ function ProjectCard({ projectId, title, img, linkSite, github, techs }:
               </button>
             </Link>
           </div>
-          <p>{techs}</p>
+          <div
+            className="flexflex-col items-start border-y-2
+           border-black dark:border-white p-2"
+          >
+            <h1 className="font-mono text-xl">Techs</h1>
+            <div className="flex">
+              {techs.map((tec) => (
+                <div
+                  key={ tec.name }
+                  className=" flex flex-col justify-between
+              items-center h-26 w-16 m-2"
+                >
+                  <img
+                    src={ tec.image }
+                    alt="tech"
+                    className="m-1"
+                  />
+                  <p className="font-mono">{tec.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
