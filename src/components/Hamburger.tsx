@@ -79,7 +79,7 @@ function HamburgerMenu() {
               )}
 
               <Link to="/projects">
-                <p className=" font-mono text-xl font-black m-1">{t('projects')}</p>
+                <p className=" font-mono text-xl font-black m-1">{t('project')}</p>
               </Link>
 
               <Link to="/contact">

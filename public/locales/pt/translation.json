@@ -1,7 +1,7 @@
 {
   "home": "Início",
   "about": "Sobre Mim",
-  "projects": "Projetos",
+  "project": "Projetos",
   "presentation": "Olá, eu sou o Jonathan Febraio",
   "contact": "Contato",
   "introduction": " Sou um Desenvolverdor Web que escreve codigos limpo, elgante e eficiente, apaixonado por tecnologia, sempre em busca de novos conhecimentos e desafios...",
@@ -17,5 +17,11 @@
   "aboutTextObjectives": "Meu objetivo é me tornar um desenvolvedor sênior, liderando projetos que não apenas resolvam problemas reais, mas também inspirem e inovem. Paralelamente, estou me dedicando a melhorar meu inglês, pois acredito que isso abrirá novas portas e oportunidades no cenário global da tecnologia.",
   "aboutcuriosityInto": "Curiosidades:",
   "aboutTextCuriosity": "Paixão por Super-Heróis: Quando não estou codificando, você provavelmente me encontrará mergulhado no universo dos super-heróis, explorando suas histórias e lições. Eu acredito que, assim como os super-heróis, todo desenvolvedor tem um superpoder único: a capacidade de criar e transformar ideias em realidade.",
-  "conect": "Se você está buscando um desenvolvedor dedicado, criativo e sempre pronto para aprender, seria uma enorme sartisfação conectar-me com você. Vamos juntos criar algo incrível!"
+  "conect": "Se você está buscando um desenvolvedor dedicado, criativo e sempre pronto para aprender, seria uma enorme sartisfação conectar-me com você. Vamos juntos criar algo incrível!",
+  "projectPageTitle": "Projetos",
+  "projects": {
+    "project0": {
+      "description": "O projeto Sitema de agendamentos é um aplicativo full stack desenvolvido para facilitar o agendamento de serviços em uma barbearia. Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente."
+    }
+  }
 }

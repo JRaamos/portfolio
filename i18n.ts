@@ -8,11 +8,10 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
-    debug: true,
+    fallbackLng: 'pt',
     detection: {
       order: ['queryString', 'cookie', 'localStorage', 'path', 'subdomain'],
-      caches: ['cookie'],
+      caches: ['localStorage'],
     },
     backend: {
       loadPath: '/locales/{{lng}}/translation.json',
