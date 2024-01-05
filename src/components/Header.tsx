@@ -30,17 +30,42 @@ export default function Header() {
             <nav className="flex justify-between w-80">
 
               <Link to="/">
-                <p>{t('home')}</p>
+                <p
+                  className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                >
+                  {t('home')}
+
+                </p>
               </Link>
 
               { location.pathname === '/' && (
-                <a href="#about">{t('about')}</a>
+                <a
+                  href="#about"
+                  className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                >
+                  {t('about')}
+
+                </a>
               )}
 
-              <a href="#projects">{t('project')}</a>
+              <a
+                href="#projects"
+                className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+              >
+                {t('project')}
 
+              </a>
               <Link to="/contact">
-                <p>{t('contact')}</p>
+                <p
+                  className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                >
+                  {t('contact')}
+
+                </p>
               </Link>
 
             </nav>

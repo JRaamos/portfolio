@@ -21,7 +21,8 @@ function ThemeToggleButton() {
       >
         <FontAwesomeIcon
           icon={ theme === 'dark' ? faSun : faMoon }
-          className="dark:text-amber-200 w-12 h-12 flex items-center"
+          className="dark:text-amber-200 w-12 h-12 flex items-center
+          hover:scale-110 transition-all"
         />
       </button>
     </div>

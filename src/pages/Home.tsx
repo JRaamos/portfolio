@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-max-depth */
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 import Header from '../components/Header';
 import About from '../components/About';
 import NavLeft from '../components/NavLeft';
@@ -8,8 +11,29 @@ import euDev from '../images/eu-sorrindo.png';
 import Projects from '../components/Projects';
 
 function Home() {
-  const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
 
+  const { t } = useTranslation();
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+  const handleScroll = () => {
+    const { scrollY } = window;
+
+    // Defina a posição de scroll na qual o botão deve aparecer
+    if (scrollY > 150) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div>
       <Header />
@@ -38,20 +62,32 @@ function Home() {
             <p className="font-mono text-center text-xl">{t('introduction')}</p>
             <div className="flex p-2 w-full justify-center">
               <button
-                className="mx-2  hadow-4xl bg-indigo-700 text-white  p-1
-              rounded-lg w-36"
+                className="mx-4  hadow-4xl bg-indigo-700 text-white  p-1
+              rounded-lg w-36 hover:scale-125 transition-all"
               >
                 {t('button')}
               </button>
               <button
                 className="mx-2 rounded-lg w-36  bg-indigo-700 text-white
-               p-1"
+               p-1 hover:scale-125 transition-all"
               >
                 {t('cv')}
               </button>
             </div>
           </section>
         </section>
+        {
+  isVisible && (
+    <button
+      onClick={ handleClick }
+      aria-label="Voltar ao topo"
+      className="fixed bottom-5 right-5 bg-indigo-700 text-white p-2
+      rounded-xl w-10 hover:scale-125 transition-all"
+    >
+      <FontAwesomeIcon icon={ faArrowUp } />
+    </button>
+  )
+}
         <section
           className="mt-28  flex flex-col justify-center items-center
           bg-[#fafafa] dark:bg-slate-800"

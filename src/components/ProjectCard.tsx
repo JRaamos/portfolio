@@ -34,7 +34,8 @@ function ProjectCard({ projectId, title, img, linkSite, github }:
           <p className="font-mono text-xl">{description}</p>
           <Link to={ `/project/${projectId}` } className="w-36">
             <button
-              className="bg-indigo-700 text-white p-1 rounded-md w-36 mt-5"
+              className="bg-indigo-700 text-white p-1 rounded-md w-36 mt-5
+              hover:scale-125 transition-all"
             >
               {t('buttonDetails')}
             </button>
