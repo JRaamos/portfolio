@@ -19,6 +19,7 @@ function Skills() {
     'PostgreSQL',
     'Tailwind',
     'React Testing Library',
+    'Express',
   ];
   return (
     <section

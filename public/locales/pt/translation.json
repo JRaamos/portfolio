@@ -24,7 +24,11 @@
   "projectPageTitle": "Projetos",
   "projects": {
     "project0": {
-      "description": "O projeto Sitema de agendamentos é um aplicativo full stack desenvolvido para facilitar o agendamento de serviços em uma barbearia. Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente."
+      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia,Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções."
+    },
+    "project1": {
+      "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…"
     }
-  }
+  },
+  "buttonDetails": "Ver mais"
 }

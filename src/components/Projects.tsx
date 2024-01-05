@@ -19,7 +19,6 @@ function Projects() {
             img={ project.img }
             linkSite={ project.linkSite }
             github={ project.github }
-            techs={ project.techs }
           />
         ))
         }

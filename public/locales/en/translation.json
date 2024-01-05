@@ -23,7 +23,11 @@
   "projetctsSubTitle": "Here you will find some of the personal and client projects I have created, each project containing its details and technologies used.",
   "projects": {
     "project0": {
-      "description": "The Systema scheduling project is a full stack application developed to facilitate scheduling services in a barbershop. It allows customers to conveniently book appointments for haircuts, shaves, and other services offered by the barbershop. "
+      "description": "The Scheduling System project is a full stack application developed for a client who owns a barbershop. It allows customers to book appointments for haircuts, shaves and other services offered by the barbershop in a convenient way, in addition to other functions."
+    },
+    "project1": {
+      "description": "The Portfolio project is a presentation website, it was developed to transmit information from a developer, such as information about their current position, objectives, what skills they have, etc…"
     }
-  }
+  },
+  "buttonDetails": "View more"
 }

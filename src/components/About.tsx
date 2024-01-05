@@ -58,7 +58,7 @@ function About() {
             <p className="font-mono text-lg italic ">{t('conect')}</p>
             <button
               className=" w-44 hadow-4xl  bg-indigo-700
-             text-slate-200 p-1 rounded-xl h-12 mt-6"
+             text-slate-200 p-1 rounded-xl h-12 mt-6 "
             >
               {t('button')}
 

@@ -10,7 +10,7 @@ import mysql from '../images/mysql.png';
 
 export const projectsDetails = [
   {
-    title: ' 1. Sitema de agendamentos',
+    title: ' Sistema de agendamentos',
     img: sitemaDeAgendamentos,
     linkSite: 'https://sistema-de-agendamento-developer.vercel.app/',
     github: 'https://github.com/JRaamos/Sistema-de-Agendamento',
@@ -39,7 +39,7 @@ export const projectsDetails = [
     }],
   },
   {
-    title: ' 2. Portifolio',
+    title: 'Portifolio',
     img: portifolio,
     linkSite: 'https://jonathan-febrail-dev.vercel.app/',
     github: 'https://github.com/JRaamos/portfolio',

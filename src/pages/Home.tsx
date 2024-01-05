@@ -32,7 +32,7 @@ function Home() {
           </section>
           <section className="max-md:w-[calc(80%)]  w-1/2 pl-8  ">
 
-            <p className="text-4xl font-mono font-bold text-center">
+            <p className="text-4xl font-mono font-bold text-center m-10">
               {t('presentation')}
             </p>
             <p className="font-mono text-center text-xl">{t('introduction')}</p>
@@ -75,12 +75,12 @@ function Home() {
           <About />
         </section>
         <section
-          className="flex flex-col justify-center items-center
-          bg-[#fafafa] dark:bg-slate-800"
+          className="flex flex-col justify-center items-center mt-5"
+          id="projects"
         >
           <section className="w-1/2">
             <h1
-              className="text-4xl font-serif font-bold mt-15
+              className="text-4xl font-serif font-bold
             text-center"
             >
               {t('projectPageTitle')}
@@ -92,11 +92,11 @@ function Home() {
              bg-indigo-700 rounded-xl"
             />
             <p className="text-center my-5">
-              {t('aboutSubTitle')}
+              {t('projetctsSubTitle')}
             </p>
 
           </section>
-          <section id="projects">
+          <section className="w-full max-w-[90rem]">
             <Projects />
           </section>
         </section>
