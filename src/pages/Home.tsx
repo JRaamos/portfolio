@@ -53,12 +53,23 @@ function Home() {
           </section>
         </section>
         <section
-          className="mt-28 border-t-2 border-gray-500
-         dark:bg-slate-600 m-5"
+          className="mt-28 m-5 flex flex-col justify-center items-center"
           id="about"
         >
-          <section className="flex justify-center">
-            <h1 className="text-3xl font-mono font-bold m-5">{t('about')}</h1>
+          <section className="w-1/2">
+            <h1
+              className="text-4xl font-serif font-bold m-5
+            text-center"
+            >
+              {t('about')}
+            </h1>
+            <p
+              className="border border-black w-16 h-1 m-auto my-5
+             bg-sky-800 rounded-xl"
+            />
+            <p className="text-center my-5">
+              {t('aboutSubTitle')}
+            </p>
           </section>
           <About />
         </section>

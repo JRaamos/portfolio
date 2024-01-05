@@ -18,32 +18,35 @@ function About() {
         <section
           className="flex flex-col justify-center items-center "
         >
+          <p className="text-3xl font-semibold w-full font-serif">{t('aboutTextInto')}</p>
+
           <div className=" my-4">
-            <p className="text-xl italic font-semibold  w-full">{t('aboutTextInto')}</p>
+            {/* <p className="text-xl italic font-semibold w-full">{t('aboutTextInto')}</p> */}
             <p className=" w-full font-mono text-lg">{t('aboutText')}</p>
-          </div>
-          <div className=" my-4">
+            {/* <div className=" my-4">
             <p className="text-xl italic font-semibold  w-full">{t('aboutCareerInto')}</p>
             <p className=" w-full font-mono text-lg">{t('aboutTextCarrer')}</p>
-          </div>
-          <div className=" my-4">
-            <p className="text-xl italic font-semibold  w-full">
+          </div> */}
+            {/* <div className=" my-4"> */}
+            {/* <p className="text-xl italic font-semibold  w-full">
               {t('aboutExperienceInto')}
-            </p>
-            <p className=" w-full font-mono text-lg">{t('aboutTextExperience')}</p>
-          </div>
-          <div className=" my-4">
-            <p className="text-xl italic font-semibold  w-full">
+            </p> */}
+            <p className=" w-full font-mono text-lg mt-2">{t('aboutTextExperience')}</p>
+            {/* </div> */}
+            {/* <div className=" my-4"> */}
+            {/* <p className="text-xl italic font-semibold  w-full">
               {t('aboutObjectivesInto')}
-            </p>
-            <p className=" w-full font-mono text-lg">{t('aboutTextObjectives')}</p>
-          </div>
-          <div className="my-4">
+            </p> */}
+            <p className=" w-full font-mono text-lg mt-2">{t('aboutTextObjectives')}</p>
+            {/* </div> */}
+            {/* <div className="my-4">
             <p className="text-xl italic font-semibold  w-full">
               {t('aboutcuriosityInto')}
             </p>
             <p className=" w-full font-mono text-lg">{t('aboutTextCuriosity')}</p>
+          </div> */}
           </div>
+
           <div
             className="flex w-full justify-center items-center mt-6
        mb-16 max-md:flex-col"
@@ -59,14 +62,14 @@ function About() {
           </div>
         </section>
       </div>
-      <section className="w-2/3">
-        <h1>
-          {t('skills')}
+      {/* <section className="w-1/2 mt-4">
+        <h1 className="text-center font-mono font-bold text-xl italic">
+          Skills
         </h1>
-        <section>
+        <section className="w-full flex items-center justify-center">
           <Skills />
         </section>
-      </section>
+      </section> */}
 
     </div>
   );
