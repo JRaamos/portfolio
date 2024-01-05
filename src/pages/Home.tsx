@@ -65,7 +65,7 @@ function Home() {
             </h1>
             <p
               className="border border-black w-16 h-1 m-auto my-5
-             bg-sky-800 rounded-xl"
+             bg-indigo-700 rounded-xl"
             />
             <p className="text-center my-5">
               {t('aboutSubTitle')}

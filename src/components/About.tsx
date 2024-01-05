@@ -18,9 +18,11 @@ function About() {
         <section
           className="flex flex-col justify-center items-center "
         >
-          <p className="text-3xl font-semibold w-full font-serif">{t('aboutTextInto')}</p>
+          <h2 className="text-3xl font-semibold w-[90vh] font-serif">
+            {t('aboutTextInto')}
+          </h2>
 
-          <div className=" my-4">
+          <div className=" my-4 w-[90vh]">
             {/* <p className="text-xl italic font-semibold w-full">{t('aboutTextInto')}</p> */}
             <p className=" w-full font-mono text-lg">{t('aboutText')}</p>
             {/* <div className=" my-4">
@@ -48,7 +50,7 @@ function About() {
           </div>
 
           <div
-            className="flex w-full justify-center items-center mt-6
+            className="flex w-[90vh] justify-center items-center mt-6
        mb-16 max-md:flex-col"
           >
             <p className="font-mono text-lg italic ">{t('conect')}</p>
@@ -62,14 +64,14 @@ function About() {
           </div>
         </section>
       </div>
-      {/* <section className="w-1/2 mt-4">
-        <h1 className="text-center font-mono font-bold text-xl italic">
+      <section className="w-1/2">
+        <h2 className="mx-4 font-serif font-semibold text-3xl">
           Skills
-        </h1>
-        <section className="w-full flex items-center justify-center">
+        </h2>
+        <section className="">
           <Skills />
         </section>
-      </section> */}
+      </section>
 
     </div>
   );
