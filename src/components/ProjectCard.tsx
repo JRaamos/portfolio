@@ -1,15 +1,8 @@
-/* eslint-disable react/jsx-max-depth */
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
-function ProjectCard({ projectId, title, img, linkSite, github }:
-{ projectId: number, title: string, img: string,
-  linkSite: string, github: string }) {
+function ProjectCard({ projectId, title, img }:
+{ projectId: number, title: string, img: string }) {
   const { t } = useTranslation();
 
   const description = t(`projects.project${projectId}.description`);

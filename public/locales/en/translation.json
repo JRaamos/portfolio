@@ -29,5 +29,6 @@
       "description": "The Portfolio project is a presentation website, it was developed to transmit information from a developer, such as information about their current position, objectives, what skills they have, etc…"
     }
   },
-  "buttonDetails": "View more"
+  "buttonDetails": "View more",
+  "contactSubTitle": "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible."
 }

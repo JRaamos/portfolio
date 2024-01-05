@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ThemeToggleButton from './ThemeToggleButton';
@@ -58,15 +57,14 @@ export default function Header() {
                 {t('project')}
 
               </a>
-              <Link to="/contact">
-                <p
-                  className="border-b-4 hover:border-indigo-700
+              <a
+                href="#contact"
+                className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
-                >
-                  {t('contact')}
+              >
+                {t('contact')}
 
-                </p>
-              </Link>
+              </a>
 
             </nav>
           )

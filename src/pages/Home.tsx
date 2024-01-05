@@ -6,9 +6,9 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../components/Header';
 import About from '../components/About';
-import NavLeft from '../components/NavLeft';
 import euDev from '../images/eu-sorrindo.png';
 import Projects from '../components/Projects';
+import Contacts from '../components/Contacts';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +20,6 @@ function Home() {
   const handleScroll = () => {
     const { scrollY } = window;
 
-    // Defina a posição de scroll na qual o botão deve aparecer
     if (scrollY > 150) {
       setIsVisible(true);
     } else {
@@ -37,7 +36,6 @@ function Home() {
   return (
     <div>
       <Header />
-      {/* <NavLeft /> */}
       <main>
         <section
           className="flex
@@ -90,7 +88,7 @@ function Home() {
 }
         <section
           className="mt-28  flex flex-col justify-center items-center
-          bg-[#fafafa] dark:bg-slate-800"
+          bg-[#c2c2c259] dark:bg-slate-800"
           id="about"
         >
           <section className="w-1/2">
@@ -132,8 +130,34 @@ function Home() {
             </p>
 
           </section>
-          <section className="w-full max-w-[90rem]">
+          <section className="w-full">
             <Projects />
+          </section>
+        </section>
+        <section
+          className="flex flex-col justify-center items-center mt-5
+          bg-[#c2c2c259] dark:bg-slate-800"
+          id="contact"
+        >
+          <section className="w-1/2">
+            <h1
+              className="text-4xl font-serif font-bold
+            text-center mt-5"
+            >
+              {t('contact')}
+            </h1>
+
+            <p
+              className="border border-black w-16 h-1 m-auto my-5
+             bg-indigo-700 rounded-xl"
+            />
+            <p className="text-center my-5">
+              {t('contactSubTitle')}
+            </p>
+
+          </section>
+          <section className="w-full">
+            <Contacts />
           </section>
         </section>
       </main>

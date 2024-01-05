@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import Header from './Header';
 import ProjectCard from './ProjectCard';
 import { projectsDetails } from '../utils/projectsDetails';
 
 function Projects() {
-  const { t } = useTranslation();
   return (
     <div>
 
@@ -17,8 +13,6 @@ function Projects() {
             projectId={ index }
             title={ project.title }
             img={ project.img }
-            linkSite={ project.linkSite }
-            github={ project.github }
           />
         ))
         }
