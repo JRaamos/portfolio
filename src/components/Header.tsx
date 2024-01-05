@@ -12,7 +12,7 @@ export default function Header() {
   const [width] = useWindowSize();
 
   return (
-    <div className="flex items-center shadow-xl dark:shadow-slate-800">
+    <div className="flex items-center shadow-md">
 
       <div
         className="h-14 w-full

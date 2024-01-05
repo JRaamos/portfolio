@@ -18,8 +18,8 @@ function ProjectCard({ projectId, title, img, linkSite, github, techs }:
 
   return (
     <div
-      className="w-11/12 bg-slate-300
-       dark:bg-slate-600 rounded-2xl mt-6 p-5 flex flex-col"
+      className=" w-[1200px] bg-slate-300
+       dark:bg-slate-600 rounded-2xl mt-6 p-5 flex flex-col max-lg:w-[90%]"
     >
       <h1
         className="text-2xl font-semibold mb-4 mx-5"

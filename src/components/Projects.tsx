@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from '../components/Header';
-import ProjectCard from '../components/ProjectCard';
+import Header from './Header';
+import ProjectCard from './ProjectCard';
 import { projectsDetails } from '../utils/projectsDetails';
 
 function Projects() {
   const { t } = useTranslation();
   return (
     <div>
-      <Header />
-      {/* <h1>{t('projectPageTitle')}</h1> */}
+      <h1
+        className="font-mono font-bold text-center text-3xl
+      mt-10 mb-10"
+      >
+        {t('projectPageTitle')}
+
+      </h1>
       <div className="flex justify-center items-center flex-col">
         {
         projectsDetails.map((project, index) => (
