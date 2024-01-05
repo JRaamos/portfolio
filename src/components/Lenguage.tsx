@@ -17,7 +17,7 @@ function Lenguage() {
            ${
              language === 'pt'
                ? 'bg-amber-200 hover:scale-110 transition-all'
-               : 'bg-[#fff] dark:bg-slate-900 hover:scale-110 transition-all'
+               : 'hover:scale-110 transition-all'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('pt');
@@ -34,7 +34,7 @@ function Lenguage() {
            ${
              language === 'en'
                ? 'bg-amber-200 hover:scale-110 transition-all'
-               : 'bg-[#fff] dark:bg-slate-900 hover:scale-110 transition-all'
+               : 'hover:scale-110 transition-all'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('en');

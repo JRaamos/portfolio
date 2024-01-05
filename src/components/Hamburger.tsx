@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PortfolioContext from '../context/PortfolioContext';
 import ThemeToggleButton from './ThemeToggleButton';
@@ -9,6 +9,7 @@ import Lenguage from './Lenguage';
 
 function HamburgerMenu() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { isOpen, setIsOpen } = useContext(PortfolioContext);
 
   const menuAnimation = isOpen ? 'animate-fadeIn' : 'animate-fadeOut';
@@ -29,6 +30,10 @@ function HamburgerMenu() {
     return () => window.removeEventListener('click', handleClickOutside);
   }, [isOpen, setIsOpen]);
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <button
@@ -47,7 +52,7 @@ function HamburgerMenu() {
       <div
         id="hamburger-menu"
         className={ `${isOpen ? menuAnimation : 'hidden-menu'}
-       absolute left-0 top-0 w-52 bg-slate-300 shadow-lg h-[calc(100%)]
+       absolute left-0 top-0 w-56 bg-slate-300 dark:bg-slate-700 shadow-lg h-[calc(100%)]
         flex flex-col items-start py-4` }
       >
 
@@ -56,38 +61,58 @@ function HamburgerMenu() {
             className="absolute left-0 top-0 h-full
          w-60  flex flex-col items-center py-4"
           >
-            <div className="flex justify-between w-44 mx-3">
+            <div className="flex w-52 justify-around">
               <Lenguage />
               <ThemeToggleButton />
             </div>
 
-            <nav className=" mt-10">
+            <nav className=" mt-10 flex flex-col items-start">
 
-              <Link to="/">
-                <p className=" font-mono text-xl font-black m-1">{t('home')}</p>
-              </Link>
-              <div>
-
-                <a
-                  href="#about"
-                  className=" font-mono text-xl font-black m-1"
-                >
-                  {t('about')}
-
-                </a>
-              </div>
+              <button
+                onClick={ () => {
+                  navigate('/');
+                  handleClick();
+                } }
+                aria-label="Voltar ao topo"
+                className=" font-mono text-xl font-black
+                  mb-[-2px]
+                  border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+              >
+                {t('home')}
+              </button>
 
               <a
+                href="#about"
+                className=" font-mono text-xl font-black
+                   border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                onClick={ handleClick }
+              >
+                {t('about')}
+
+              </a>
+              <a
                 href="#projects"
-                className=" font-mono text-xl font-black m-1"
+                className=" font-mono text-xl font-black
+                border-b-4 hover:border-indigo-700
+                  transition-all border-transparent
+                "
+                onClick={ handleClick }
               >
                 {t('project')}
 
               </a>
 
-              <Link to="/contact">
-                <p className=" font-mono text-xl font-black m-1">{t('contact')}</p>
-              </Link>
+              <a
+                href="#contact"
+                className=" font-mono text-xl font-black
+                  border-b-4 hover:border-indigo-700
+                  transition-all border-transparent "
+                onClick={ handleClick }
+              >
+                {t('contact')}
+              </a>
             </nav>
           </div>
         )}
