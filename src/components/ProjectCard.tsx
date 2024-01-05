@@ -1,86 +1,47 @@
-/* eslint-disable react/jsx-max-depth */
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
- type Tech = { name: string, image: string };
-
-function ProjectCard({ projectId, title, img, linkSite, github, techs }:
-{ projectId: number, title: string, img: string,
-  linkSite: string, github: string, techs: Tech[] }) {
+function ProjectCard({ projectId, title, img }:
+{ projectId: number, title: string, img: string }) {
   const { t } = useTranslation();
 
   const description = t(`projects.project${projectId}.description`);
 
   return (
     <div
-      className=" w-[1200px] bg-slate-300
-       dark:bg-slate-600 rounded-2xl mt-6 p-5 flex flex-col max-lg:w-[90%]"
+      className="w-full mt-6 p-5 flex"
     >
-      <h1
-        className="text-2xl font-semibold mb-4 mx-5"
+      <div
+        className="flex max-lg:flex-col w-full justify-around
+      max-lg:justify-center max-lg:items-center"
       >
-        {title}
-      </h1>
-      <div className="flex justify-around max-lg:flex-col">
         <img
           src={ img }
           alt={ title }
-          className="w-[60vh]
-        rounded-2xl m-4 h-[40vh] max-[1300px]:w-[50vh] max-[1300px]:h-[40vh]
-        max-lg:w-[60vh] max-lg:h-[40vh] max-lg:m-auto"
+          className="w-[60vh] h-[40vh]
+          rounded-2xl m-4  max-lg:w-[80%] max-lg:h-[60%]"
         />
-
-        <div className="w-full flex flex-col m-4 max-lg:m-1">
-          <p className="font-mono text-xl max-[1300px]:text-lg">{description}</p>
-          <div className="flex m-2">
-            <Link to={ github } target="_blank" rel="noreferrer">
-              <button
-                className="flex flex-col items-center w-20 m-2"
-              >
-                <FontAwesomeIcon
-                  icon={ faGithub }
-                  className="dark:text-slate-100 text-slate-900 h-14 w-14 max-sm:w-9 "
-                />
-                Github
-              </button>
-            </Link>
-            <Link to={ linkSite } target="_blank" rel="noreferrer">
-              <button className="flex flex-col items-center w-20 h-22 m-2">
-                <FontAwesomeIcon
-                  icon={ faGlobe }
-                  className="dark:text-slate-100 text-slate-900 h-14 w-14 max-sm:w-9 "
-                />
-                Site
-              </button>
-            </Link>
-          </div>
-          <div
-            className="flexflex-col items-start border-y-2
-           border-black dark:border-white p-2"
+        <div className="flex flex-col w-[60vh] m-10 max-lg:w-2/3 max-lg:items-center">
+          <h1
+            className="text-2xl font-semibold mb-5 max-lg:text-center"
           >
-            <h1 className="font-mono text-xl">Techs</h1>
-            <div className="flex">
-              {techs.map((tec) => (
-                <div
-                  key={ tec.name }
-                  className=" flex flex-col justify-between
-              items-center h-26 w-16 m-2"
-                >
-                  <img
-                    src={ tec.image }
-                    alt="tech"
-                    className="m-1"
-                  />
-                  <p className="font-mono">{tec.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+            {title}
+          </h1>
+          <p
+            className="font-mono text-xl max-lg:text-center
+           max-lg:w-full"
+          >
+            {description}
+
+          </p>
+          <Link to={ `/project/${projectId}` } className="w-36">
+            <button
+              className="bg-indigo-700 text-white p-1 rounded-md w-36 mt-5
+              hover:scale-125 transition-all"
+            >
+              {t('buttonDetails')}
+            </button>
+          </Link>
         </div>
       </div>
     </div>

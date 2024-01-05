@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ThemeToggleButton from './ThemeToggleButton';
@@ -30,20 +29,42 @@ export default function Header() {
             <nav className="flex justify-between w-80">
 
               <Link to="/">
-                <p>{t('home')}</p>
+                <p
+                  className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                >
+                  {t('home')}
+
+                </p>
               </Link>
 
               { location.pathname === '/' && (
-                <a href="#about">{t('about')}</a>
+                <a
+                  href="#about"
+                  className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+                >
+                  {t('about')}
+
+                </a>
               )}
 
-              <Link to="/projects">
-                <p>{t('project')}</p>
-              </Link>
+              <a
+                href="#projects"
+                className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+              >
+                {t('project')}
 
-              <Link to="/contact">
-                <p>{t('contact')}</p>
-              </Link>
+              </a>
+              <a
+                href="#contact"
+                className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+              >
+                {t('contact')}
+
+              </a>
 
             </nav>
           )

@@ -19,11 +19,17 @@
   "aboutcuriosityInto": "Curiosidades:",
   "aboutTextCuriosity": "Paixão por Super-Heróis: Quando não estou codificando, você provavelmente me encontrará mergulhado no universo dos super-heróis, explorando suas histórias e lições. Eu acredito que, assim como os super-heróis, todo desenvolvedor tem um superpoder único: a capacidade de criar e transformar ideias em realidade.",
   "conect": "Se você está buscando um desenvolvedor dedicado, criativo e sempre pronto para aprender, seria uma enorme sartisfação conectar-me com você. Vamos juntos criar algo incrível!",
+  "projetctsSubTitle": "Aqui você encontrará alguns dos projetos pessoais e de clientes que criei, cada projeto contendo seus detalhes e tecnologias utilizadas.",
 
   "projectPageTitle": "Projetos",
   "projects": {
     "project0": {
-      "description": "O projeto Sitema de agendamentos é um aplicativo full stack desenvolvido para facilitar o agendamento de serviços em uma barbearia. Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente."
+      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia,Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções."
+    },
+    "project1": {
+      "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…"
     }
-  }
+  },
+  "buttonDetails": "Ver mais",
+  "contactSubTitle": "Sinta-se à vontade para entrar em contato comigo enviando o formulário abaixo e entrarei em contato com você o mais breve possível."
 }

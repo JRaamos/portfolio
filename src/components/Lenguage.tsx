@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import br from '../images/br.png';
@@ -16,8 +16,8 @@ function Lenguage() {
         className={ `w-12 h-12 flex items-center mr-3
            ${
              language === 'pt'
-               ? 'bg-amber-200'
-               : 'bg-gray-200 dark:bg-slate-900'
+               ? 'bg-amber-200 hover:scale-110 transition-all'
+               : 'hover:scale-110 transition-all'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('pt');
@@ -33,8 +33,8 @@ function Lenguage() {
         className={ `w-12 h-12 flex items-center
            ${
              language === 'en'
-               ? 'bg-amber-200'
-               : 'bg-gray-200 dark:bg-slate-900'
+               ? 'bg-amber-200 hover:scale-110 transition-all'
+               : 'hover:scale-110 transition-all'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('en');
