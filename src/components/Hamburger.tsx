@@ -1,14 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PortfolioContext from '../context/PortfolioContext';
 import ThemeToggleButton from './ThemeToggleButton';
 import Lenguage from './Lenguage';
 
 function HamburgerMenu() {
-  const location = useLocation();
   const { t } = useTranslation();
   const { isOpen, setIsOpen } = useContext(PortfolioContext);
 
@@ -67,8 +66,8 @@ function HamburgerMenu() {
               <Link to="/">
                 <p className=" font-mono text-xl font-black m-1">{t('home')}</p>
               </Link>
+              <div>
 
-              { location.pathname === '/' && (
                 <a
                   href="#about"
                   className=" font-mono text-xl font-black m-1"
@@ -76,11 +75,15 @@ function HamburgerMenu() {
                   {t('about')}
 
                 </a>
-              )}
+              </div>
 
-              <Link to="/projects">
-                <p className=" font-mono text-xl font-black m-1">{t('project')}</p>
-              </Link>
+              <a
+                href="#projects"
+                className=" font-mono text-xl font-black m-1"
+              >
+                {t('project')}
+
+              </a>
 
               <Link to="/contact">
                 <p className=" font-mono text-xl font-black m-1">{t('contact')}</p>

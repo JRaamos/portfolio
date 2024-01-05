@@ -37,9 +37,7 @@ export default function Header() {
                 <a href="#about">{t('about')}</a>
               )}
 
-              <Link to="/projects">
-                <p>{t('project')}</p>
-              </Link>
+              <a href="#projects">{t('project')}</a>
 
               <Link to="/contact">
                 <p>{t('contact')}</p>

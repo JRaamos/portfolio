@@ -17,7 +17,7 @@ function Home() {
       <main>
         <section
           className="flex
-      m-auto justify-around h-[calc(82vh)] items-center
+      m-auto justify-around h-[calc(83vh)] items-center
        max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]"
         >
           <section
@@ -53,12 +53,13 @@ function Home() {
           </section>
         </section>
         <section
-          className="mt-28 m-5 flex flex-col justify-center items-center"
+          className="mt-28  flex flex-col justify-center items-center
+          bg-[#fafafa] dark:bg-slate-800"
           id="about"
         >
           <section className="w-1/2">
             <h1
-              className="text-4xl font-serif font-bold m-5
+              className="text-4xl font-serif font-bold mt-5
             text-center"
             >
               {t('about')}
@@ -73,8 +74,31 @@ function Home() {
           </section>
           <About />
         </section>
-        <section>
-          <Projects />
+        <section
+          className="flex flex-col justify-center items-center
+          bg-[#fafafa] dark:bg-slate-800"
+        >
+          <section className="w-1/2">
+            <h1
+              className="text-4xl font-serif font-bold mt-15
+            text-center"
+            >
+              {t('projectPageTitle')}
+
+            </h1>
+
+            <p
+              className="border border-black w-16 h-1 m-auto my-5
+             bg-indigo-700 rounded-xl"
+            />
+            <p className="text-center my-5">
+              {t('aboutSubTitle')}
+            </p>
+
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
         </section>
       </main>
 

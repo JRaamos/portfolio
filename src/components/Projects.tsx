@@ -8,13 +8,7 @@ function Projects() {
   const { t } = useTranslation();
   return (
     <div>
-      <h1
-        className="font-mono font-bold text-center text-3xl
-      mt-10 mb-10"
-      >
-        {t('projectPageTitle')}
 
-      </h1>
       <div className="flex justify-center items-center flex-col">
         {
         projectsDetails.map((project, index) => (

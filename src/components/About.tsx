@@ -7,22 +7,24 @@ function About() {
 
   return (
     <div
-      className=" w-full flex
-    items-start"
+      className=" w-full flex max-lg:flex-col justify-evenly"
     >
       <div
         className="flex flex-col
-       items-center justify-center mx-10 w-full"
+       items-center justify-center w-[90vh] max-2xl:w-[65%]
+        m-11 max-lg:w-[100%] max-lg:m-0"
       >
 
         <section
-          className="flex flex-col justify-center items-center "
+          className="flex flex-col justify-center max-2xl:w-[70vh]
+          max-xl:w-[60vh] max-lg:w-[90%]
+           w-full"
         >
-          <h2 className="text-3xl font-semibold w-[90vh] font-serif">
+          <h2 className="text-3xl font-semibold font-serif">
             {t('aboutTextInto')}
           </h2>
 
-          <div className=" my-4 w-[90vh]">
+          <div className="my-4">
             {/* <p className="text-xl italic font-semibold w-full">{t('aboutTextInto')}</p> */}
             <p className=" w-full font-mono text-lg">{t('aboutText')}</p>
             {/* <div className=" my-4">
@@ -50,13 +52,13 @@ function About() {
           </div>
 
           <div
-            className="flex w-[90vh] justify-center items-center mt-6
-       mb-16 max-md:flex-col"
+            className="flex justify-center items-center mt-4
+       mb-16 flex-col max-lg:mb-0"
           >
             <p className="font-mono text-lg italic ">{t('conect')}</p>
             <button
-              className=" w-[50%] hadow-4xl  bg-indigo-700
-             text-slate-200 p-1 rounded-lg h-12"
+              className=" w-44 hadow-4xl  bg-indigo-700
+             text-slate-200 p-1 rounded-xl h-12 mt-6"
             >
               {t('button')}
 
@@ -64,11 +66,15 @@ function About() {
           </div>
         </section>
       </div>
-      <section className="w-1/2">
-        <h2 className="mx-4 font-serif font-semibold text-3xl">
+      <section className="w-[67vh] m-11 max-lg:w-[100%] mx-6">
+        <h2 className="mx-5 font-serif font-semibold text-3xl">
           Skills
         </h2>
-        <section className="">
+        <section
+          className=" max-2xl:w-[95%]
+           max-lg:w-[100%]
+"
+        >
           <Skills />
         </section>
       </section>

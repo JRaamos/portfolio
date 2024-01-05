@@ -17,7 +17,7 @@ function Lenguage() {
            ${
              language === 'pt'
                ? 'bg-amber-200'
-               : 'bg-gray-200 dark:bg-slate-900'
+               : 'bg-[#fff] dark:bg-slate-900'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('pt');
@@ -34,7 +34,7 @@ function Lenguage() {
            ${
              language === 'en'
                ? 'bg-amber-200'
-               : 'bg-gray-200 dark:bg-slate-900'
+               : 'bg-[#fff] dark:bg-slate-900'
         } rounded-lg` }
         onClick={ () => {
           i18n.changeLanguage('en');

@@ -22,7 +22,7 @@ function Skills() {
   ];
   return (
     <section
-      className="w-[60vh] flex flex-wrap items-center"
+      className="w-full max-lg:w-[90%] flex flex-wrap items-center"
     >
       {skils.map((skill) => (
         <div
@@ -30,7 +30,15 @@ function Skills() {
           className="flex flex-col items-center justify-center
         m-4"
         >
-          <p className="font-mono text-lg text-slate-700">{skill}</p>
+          <p
+            className="font-mono text-lg text-slate-700 dark:text-slate-400
+          border rounded-xl p-2 bg-slate-300 dark:bg-slate-900 shadow-lg
+          dark:border-black hover:scale-125 hover:cursor-pointer
+          transition-all hover:dark:bg-slate-800 hover:bg-[#fafafa]"
+          >
+            {skill}
+
+          </p>
         </div>
       ))}
 
