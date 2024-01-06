@@ -62,12 +62,14 @@ function Home() {
             </p>
             <p className="font-mono text-center text-xl">{t('introduction')}</p>
             <div className="flex p-2 w-full justify-center">
-              <button
-                className="mx-4  hadow-4xl bg-indigo-700 text-white  p-1
-              rounded-lg w-36 hover:scale-125 transition-all"
-              >
-                {t('button')}
-              </button>
+              <a href="#contact">
+                <button
+                  className="mx-4  hadow-4xl bg-indigo-700 text-white  p-1
+                rounded-lg w-36 hover:scale-125 transition-all"
+                >
+                  {t('button')}
+                </button>
+              </a>
               <button
                 className="mx-2 rounded-lg w-36  bg-indigo-700 text-white
                p-1 hover:scale-125 transition-all"
