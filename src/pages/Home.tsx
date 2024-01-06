@@ -142,13 +142,13 @@ function Home() {
           <section className="w-1/2">
             <h1
               className="text-4xl font-serif font-bold
-            text-center mt-5"
+            text-center mt-7"
             >
               {t('contact')}
             </h1>
 
             <p
-              className="border border-black w-16 h-1 m-auto my-5
+              className="border border-black w-16 h-1 m-auto my-7
              bg-indigo-700 rounded-xl"
             />
             <p className="text-center my-5">

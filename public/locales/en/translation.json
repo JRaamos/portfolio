@@ -30,5 +30,9 @@
     }
   },
   "buttonDetails": "View more",
-  "contactSubTitle": "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible."
+  "contactSubTitle": "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible.",
+  "name": "Enter your name",
+  "email": "Enter your email",
+  "message": "Enter your message",
+  "buttonSubmit": "Submit"
 }

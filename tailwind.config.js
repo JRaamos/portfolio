@@ -22,7 +22,7 @@ export default {
       },
       animation: {
         fadeIn: 'fadeIn 0.8s ease-in-out',
-        fadeOut: 'fadeOut 0.5s ease-in-out forwards', // 'forwards' mantém o estado final
+        fadeOut: 'fadeOut 0.5s ease-in-out forwards',
 
       },
     },

@@ -31,5 +31,9 @@
     }
   },
   "buttonDetails": "Ver mais",
-  "contactSubTitle": "Sinta-se à vontade para entrar em contato comigo enviando o formulário abaixo e entrarei em contato com você o mais breve possível."
+  "contactSubTitle": "Sinta-se à vontade para entrar em contato comigo enviando o formulário abaixo e entrarei em contato com você o mais breve possível.",
+  "name": "Digite seu nome",
+  "email": "Digite seu email",
+  "message": "Digite sua mensagem",
+  "buttonSubmit": "Enviar"
 }
