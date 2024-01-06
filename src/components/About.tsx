@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-max-depth */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Skills from './Skills';
@@ -56,17 +57,18 @@ function About() {
        mb-16 flex-col max-lg:mb-0"
           >
             <p className="font-mono text-lg italic ">{t('conect')}</p>
-            <button
-              className=" w-44 hadow-4xl  bg-indigo-700
-             text-slate-200 p-1 rounded-xl h-12 mt-6 hover:scale-125 transition-all"
-            >
-              {t('button')}
-
-            </button>
+            <a href="#contact">
+              <button
+                className=" w-44 hadow-4xl  bg-indigo-700
+              text-slate-200 p-1 rounded-xl h-12 mt-6 hover:scale-125 transition-all"
+              >
+                {t('button')}
+              </button>
+            </a>
           </div>
         </section>
       </div>
-      <section className="w-[67vh] m-11 max-lg:w-[100%] mx-6">
+      <section className="w-[67vh] m-11 max-lg:w-[95%] mx-6">
         <h2 className="mx-5 font-serif font-semibold text-3xl">
           Skills
         </h2>

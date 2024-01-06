@@ -9,6 +9,7 @@ import About from '../components/About';
 import euDev from '../images/eu-sorrindo.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
+import Footer from '../components/Footer';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,9 @@ function Home() {
   }, []);
   return (
     <div>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <main>
         <section
           className="flex
@@ -59,12 +62,14 @@ function Home() {
             </p>
             <p className="font-mono text-center text-xl">{t('introduction')}</p>
             <div className="flex p-2 w-full justify-center">
-              <button
-                className="mx-4  hadow-4xl bg-indigo-700 text-white  p-1
-              rounded-lg w-36 hover:scale-125 transition-all"
-              >
-                {t('button')}
-              </button>
+              <a href="#contact">
+                <button
+                  className="mx-4  hadow-4xl bg-indigo-700 text-white  p-1
+                rounded-lg w-36 hover:scale-125 transition-all"
+                >
+                  {t('button')}
+                </button>
+              </a>
               <button
                 className="mx-2 rounded-lg w-36  bg-indigo-700 text-white
                p-1 hover:scale-125 transition-all"
@@ -142,13 +147,13 @@ function Home() {
           <section className="w-1/2">
             <h1
               className="text-4xl font-serif font-bold
-            text-center mt-5"
+            text-center mt-7"
             >
               {t('contact')}
             </h1>
 
             <p
-              className="border border-black w-16 h-1 m-auto my-5
+              className="border border-black w-16 h-1 m-auto my-7
              bg-indigo-700 rounded-xl"
             />
             <p className="text-center my-5">
@@ -161,7 +166,9 @@ function Home() {
           </section>
         </section>
       </main>
-
+      <footer className="w-full bg-slate-950">
+        <Footer />
+      </footer>
     </div>
   );
 }
