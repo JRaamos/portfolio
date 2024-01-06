@@ -34,5 +34,6 @@
   "name": "Enter your name",
   "email": "Enter your email",
   "message": "Enter your message",
-  "buttonSubmit": "Submit"
+  "buttonSubmit": "Submit",
+  "footerApresentation": "A FullStack developer passionate about technology and programming, always looking for new challenges and knowledge."
 }

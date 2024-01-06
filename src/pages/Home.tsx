@@ -9,6 +9,7 @@ import About from '../components/About';
 import euDev from '../images/eu-sorrindo.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
+import Footer from '../components/Footer';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,9 @@ function Home() {
   }, []);
   return (
     <div>
-      <Header />
+      <header>
+        <Header />
+      </header>
       <main>
         <section
           className="flex
@@ -161,7 +164,9 @@ function Home() {
           </section>
         </section>
       </main>
-
+      <footer className="w-full mt-5">
+        <Footer />
+      </footer>
     </div>
   );
 }
