@@ -7,18 +7,21 @@ import { useTranslation } from 'react-i18next';
 function Footer() {
   const { t } = useTranslation();
   return (
-    <div className="h-[40vh] w-full flex flex-col items-center justify-between">
-      <div className="mt-12 w-[80%] flex">
+    <div
+      className="h-[43vh]  flex flex-col items-center
+     justify-between text-white"
+    >
+      <div className="mt-20 w-[70%] flex justify-between">
         <div>
-          <h2>
+          <h2 className="font-mono font-semibold text-xl">
             Jonathan Febraio
           </h2>
-          <p>
+          <p className="max-w-[56vh] w-full font-mono text-sm">
             {t('footerApresentation')}
           </p>
         </div>
-        <div>
-          <h2>
+        <div className="">
+          <h2 className="font-mono font-semibold text-xl">
             Social
           </h2>
           <Link
@@ -28,32 +31,32 @@ function Footer() {
           >
             <FontAwesomeIcon
               icon={ faLinkedin }
-              className=""
+              className="h-8 m-2"
             />
           </Link>
           <Link to="https://github.com/JRaamos" target="_blank" rel="noreferrer">
             <FontAwesomeIcon
               icon={ faGithub }
-              className=""
+              className="h-8 m-2"
             />
           </Link>
         </div>
       </div>
-      <div className="h-16 border-t-2 w-[80%]">
-        <p className="m-4 text-center">
+      <div className="h-18 border-t-2 w-[70%]">
+        <p className="m-6 text-center">
           © Copyright 2024. Made by
           {' '}
           <a
             href="https://jonathan-febrail-dev.vercel.app/"
             target="_blank"
             rel="noreferrer noopener"
-
+            className="transition duration-3 underline
+              font-bold font-mono"
           >
             Jonathan Febraio
           </a>
         </p>
       </div>
-
     </div>
   );
 }

@@ -66,7 +66,7 @@ function About() {
           </div>
         </section>
       </div>
-      <section className="w-[67vh] m-11 max-lg:w-[100%] mx-6">
+      <section className="w-[67vh] m-11 max-lg:w-[95%] mx-6">
         <h2 className="mx-5 font-serif font-semibold text-3xl">
           Skills
         </h2>

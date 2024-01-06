@@ -164,7 +164,7 @@ function Home() {
           </section>
         </section>
       </main>
-      <footer className="w-full mt-5">
+      <footer className="w-full bg-slate-950">
         <Footer />
       </footer>
     </div>
