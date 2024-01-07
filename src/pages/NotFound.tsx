@@ -11,11 +11,8 @@ function NotFound() {
         >
           Oops! Página não encontrada
         </h1>
-        <h2
-          className="font-mono text-center text-xl"
-        >
+        <h2 className="font-mono text-center text-xl">
           Desculpe, a página que você está procurando não existe.
-
         </h2>
         <Link to="/">
           <h3
@@ -24,7 +21,6 @@ function NotFound() {
  text-blue-900"
           >
             Voltar à página inicial
-
           </h3>
         </Link>
       </div>

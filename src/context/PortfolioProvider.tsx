@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PortfolioContext from './PortfolioContext';
 import { PortfolioProviderProps } from '../types/Portfolio.type';
 
-function PortfolioProvider({ children }:
-PortfolioProviderProps) {
+function PortfolioProvider({ children }: PortfolioProviderProps) {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
   const [language, setLanguage] = useState(localStorage.getItem('language') ?? 'pt');
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,7 @@ PortfolioProviderProps) {
         setIsOpen,
       } }
     >
-      { children }
+      {children}
     </PortfolioContext.Provider>
   );
 }

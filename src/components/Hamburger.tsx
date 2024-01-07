@@ -19,8 +19,13 @@ function HamburgerMenu() {
       const menuElement = document.getElementById('hamburger-menu');
       const buttonElement = document.getElementById('hamburger-button');
 
-      if (isOpen && menuElement && !menuElement.contains(event.target as Node)
-          && buttonElement && !buttonElement.contains(event.target as Node)) {
+      if (
+        isOpen
+        && menuElement
+        && !menuElement.contains(event.target as Node)
+        && buttonElement
+        && !buttonElement.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -55,7 +60,6 @@ function HamburgerMenu() {
        absolute left-0 top-0 w-56 bg-slate-300 dark:bg-slate-700 shadow-lg h-[calc(100%)]
         flex flex-col items-start py-4` }
       >
-
         {isOpen && (
           <div
             className="absolute left-0 top-0 h-full
@@ -67,7 +71,6 @@ function HamburgerMenu() {
             </div>
 
             <nav className=" mt-10 flex flex-col items-start">
-
               <button
                 onClick={ () => {
                   navigate('/');
@@ -90,7 +93,6 @@ function HamburgerMenu() {
                 onClick={ handleClick }
               >
                 {t('about')}
-
               </a>
               <a
                 href="#projects"
@@ -101,7 +103,6 @@ function HamburgerMenu() {
                 onClick={ handleClick }
               >
                 {t('project')}
-
               </a>
 
               <a
