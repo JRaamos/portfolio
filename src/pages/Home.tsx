@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
+import { saveAs } from 'file-saver';
 import Header from '../components/Header';
 import About from '../components/About';
 import euDev from '../images/eu-sorrindo.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
+import curriculo from '../utils/Curriculo_Jonathan.pdf';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,6 +36,11 @@ function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleDownload = () => {
+    saveAs(curriculo, 'Jonathan-Febraio.pdf');
+  };
+
   return (
     <div>
       <header>
@@ -67,6 +74,7 @@ function Home() {
               <button
                 className="mx-2 rounded-lg w-36  bg-indigo-700 text-white
                p-1 hover:scale-125 transition-all"
+                onClick={ handleDownload }
               >
                 {t('cv')}
               </button>

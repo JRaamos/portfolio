@@ -65,7 +65,10 @@ function Contacts() {
                 Nome
               </label>
               {isSent && (
-                <p className="text-indigo-700 font-bold font-mono transition-all">
+                <p
+                  className="text-indigo-700 dark:text-indigo-400
+                font-bold font-mono transition-all"
+                >
                   {t('success')}
                 </p>
               )}
