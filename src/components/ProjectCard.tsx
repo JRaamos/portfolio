@@ -15,7 +15,7 @@ function ProjectCard({
   const description = t(`projects.project${projectId}.description`);
 
   return (
-    <div className="w-full mt-6 p-5 flex">
+    <div className="w-full max-w-[100rem] mt-6 p-5 flex">
       <div
         className="flex max-lg:flex-col w-full justify-around
       max-lg:justify-center max-lg:items-center"

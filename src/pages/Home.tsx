@@ -8,6 +8,7 @@ import { saveAs } from 'file-saver';
 import Header from '../components/Header';
 import About from '../components/About';
 import euDev from '../images/eu-sorrindo.png';
+// import euDev from '../images/eu.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
@@ -46,11 +47,15 @@ function Home() {
       <header>
         <Header />
       </header>
+      <div className="mouse w-[20px] h-[40px] border border-black dark:border-white">
+        <div className="ponto  w-1.5 h-1.5 bg-indigo-700 dark:bg-indigo-300" />
+      </div>
       <main>
         <section
           className="flex
       m-auto justify-around h-[calc(83vh)] items-center
-       max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]"
+       max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]
+        max-w-[115rem]"
         >
           <section
             className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4"
