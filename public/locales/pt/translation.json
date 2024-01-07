@@ -36,5 +36,6 @@
   "email": "Digite seu email",
   "message": "Digite sua mensagem",
   "buttonSubmit": "Enviar",
-  "footerApresentation": "Um desenvolvedor FullStack apaixonado por tecnologia e programação sempre em busca de novos desafios e conhecimentos."
+  "footerApresentation": "Um desenvolvedor FullStack apaixonado por tecnologia e programação sempre em busca de novos desafios e conhecimentos.",
+  "success": "Mensagem enviada com sucesso!"
 }
