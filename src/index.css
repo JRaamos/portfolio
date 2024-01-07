@@ -25,3 +25,43 @@ html {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mouse {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  animation: scrollAnimation 1.5s infinite;
+}
+
+.ponto {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: pontoAnimation 1s infinite;
+}
+
+@keyframes scrollAnimation {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes pontoAnimation {
+  0% {
+    transform: translate(-50%, -50%);
+    background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+  }
+
+  100% {
+    transform: translate(-50%, 200%);
+    background-color: transparent;
+  }
+}

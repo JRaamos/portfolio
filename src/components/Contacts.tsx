@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-max-depth */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
@@ -55,7 +55,6 @@ function Contacts() {
   return (
     <div className="w-full mb-16 mt-10">
       <div className="w-full flex items-center justify-center">
-
         <form
           className="flex flex-col max-w-[70vh] p-6 items-center
           rounded-lg shadow-lg bg-[#fffffffb] w-[90%] dark:bg-slate-600"
@@ -65,33 +64,24 @@ function Contacts() {
               <label htmlFor="name" className="font-mono">
                 Nome
               </label>
-              {
-                isSent
-                 && (
-                   <p
-                     className="text-indigo-700 font-bold font-mono transition-all"
-                   >
-                     { t('success') }
-                   </p>
-                 )
-              }
-              {
-                isError
-                 && (
-                   <p
-                     className="text-red-700 font-bold font-mono transition-all"
-                   >
-                     { t('error') }
-                   </p>
-                 )
-              }
-              {
-                isLoading ? (
-                  <div className="loading-spinner w-10 h-10 mb-1" />
-                ) : (
-                  <div className="w-10 h-10 mb-1" />
-                )
-              }
+              {isSent && (
+                <p
+                  className="text-indigo-700 dark:text-indigo-400
+                font-bold font-mono transition-all"
+                >
+                  {t('success')}
+                </p>
+              )}
+              {isError && (
+                <p className="text-red-700 font-bold font-mono transition-all">
+                  {t('error')}
+                </p>
+              )}
+              {isLoading ? (
+                <div className="loading-spinner w-10 h-10 mb-1" />
+              ) : (
+                <div className="w-10 h-10 mb-1" />
+              )}
             </div>
             <input
               type="text"

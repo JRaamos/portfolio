@@ -14,41 +14,51 @@ export const projectsDetails = [
     img: sitemaDeAgendamentos,
     linkSite: 'https://sistema-de-agendamento-developer.vercel.app/',
     github: 'https://github.com/JRaamos/Sistema-de-Agendamento',
-    techs: [{
-      name: 'CSS',
-      image: css,
-    }, {
-      name: 'Node',
-      image: node,
-    }, {
-      name: 'TypeScript',
-      image: typeScript,
-    }, {
-      name: 'React',
-      image: react,
-    },
-    {
-      name: 'RTL',
-      image: rtl,
-    }, {
-      name: 'Redux',
-      image: redux,
-    }, {
-      name: 'MySQL',
-      image: mysql,
-    }],
+    techs: [
+      {
+        name: 'CSS',
+        image: css,
+      },
+      {
+        name: 'Node',
+        image: node,
+      },
+      {
+        name: 'TypeScript',
+        image: typeScript,
+      },
+      {
+        name: 'React',
+        image: react,
+      },
+      {
+        name: 'RTL',
+        image: rtl,
+      },
+      {
+        name: 'Redux',
+        image: redux,
+      },
+      {
+        name: 'MySQL',
+        image: mysql,
+      },
+    ],
   },
   {
     title: 'Portifolio',
     img: portifolio,
     linkSite: 'https://jonathan-febrail-dev.vercel.app/',
     github: 'https://github.com/JRaamos/portfolio',
-    techs: [{
-      name: 'React',
-      image: react,
-    }, {
-      name: 'TypeScript',
-      image: typeScript,
-    }],
+    techs: [
+      {
+        name: 'React',
+        image: react,
+      },
+      {
+        name: 'TypeScript',
+        image: typeScript,
+      },
+    ],
   },
 ];

@@ -22,9 +22,7 @@ function Skills() {
     'Express',
   ];
   return (
-    <section
-      className="w-full max-lg:w-[90%] flex flex-wrap items-center"
-    >
+    <section className="w-full max-lg:w-[90%] flex flex-wrap items-center">
       {skils.map((skill) => (
         <div
           key={ skill }
@@ -38,11 +36,9 @@ function Skills() {
           transition-all hover:dark:bg-slate-800 hover:bg-[#fafafa]"
           >
             {skill}
-
           </p>
         </div>
       ))}
-
     </section>
   );
 }

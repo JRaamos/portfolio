@@ -4,12 +4,15 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
+import { saveAs } from 'file-saver';
 import Header from '../components/Header';
 import About from '../components/About';
 import euDev from '../images/eu-sorrindo.png';
+// import euDev from '../images/eu.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
+import curriculo from '../utils/Curriculo_Jonathan.pdf';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,29 +37,32 @@ function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleDownload = () => {
+    saveAs(curriculo, 'Jonathan-Febraio.pdf');
+  };
+
   return (
     <div>
       <header>
         <Header />
       </header>
+      <div className="mouse w-[20px] h-[40px] border border-black dark:border-white">
+        <div className="ponto  w-1.5 h-1.5 bg-indigo-700 dark:bg-indigo-300" />
+      </div>
       <main>
         <section
           className="flex
       m-auto justify-around h-[calc(83vh)] items-center
-       max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]"
+       max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]
+        max-w-[115rem]"
         >
           <section
-            className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4
-  "
+            className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4"
           >
-            <img
-              src={ euDev }
-              alt="Jonathan Febraio"
-              className="rounded-full mb-5 "
-            />
+            <img src={ euDev } alt="Jonathan Febraio" className="rounded-full mb-5 " />
           </section>
           <section className="max-md:w-[calc(80%)]  w-1/2 pl-8  ">
-
             <p className="text-4xl font-mono font-bold text-center m-10">
               {t('presentation')}
             </p>
@@ -73,24 +79,23 @@ function Home() {
               <button
                 className="mx-2 rounded-lg w-36  bg-indigo-700 text-white
                p-1 hover:scale-125 transition-all"
+                onClick={ handleDownload }
               >
                 {t('cv')}
               </button>
             </div>
           </section>
         </section>
-        {
-  isVisible && (
-    <button
-      onClick={ handleClick }
-      aria-label="Voltar ao topo"
-      className="fixed bottom-5 right-5 bg-indigo-700 text-white p-2
+        {isVisible && (
+          <button
+            onClick={ handleClick }
+            aria-label="Voltar ao topo"
+            className="fixed bottom-5 right-5 bg-indigo-700 text-white p-2
       rounded-xl w-10 hover:scale-125 transition-all"
-    >
-      <FontAwesomeIcon icon={ faArrowUp } />
-    </button>
-  )
-}
+          >
+            <FontAwesomeIcon icon={ faArrowUp } />
+          </button>
+        )}
         <section
           className="mt-28  flex flex-col justify-center items-center
           bg-[#c2c2c259] dark:bg-slate-800"
@@ -107,33 +112,24 @@ function Home() {
               className="border border-black w-16 h-1 m-auto my-5
              bg-indigo-700 rounded-xl"
             />
-            <p className="text-center my-5">
-              {t('aboutSubTitle')}
-            </p>
+            <p className="text-center my-5">{t('aboutSubTitle')}</p>
           </section>
           <About />
         </section>
-        <section
-          className="flex flex-col justify-center items-center mt-5"
-          id="projects"
-        >
+        <section className="flex flex-col justify-center items-center mt-5" id="projects">
           <section className="w-1/2">
             <h1
               className="text-4xl font-serif font-bold
             text-center"
             >
               {t('projectPageTitle')}
-
             </h1>
 
             <p
               className="border border-black w-16 h-1 m-auto my-5
              bg-indigo-700 rounded-xl"
             />
-            <p className="text-center my-5">
-              {t('projetctsSubTitle')}
-            </p>
-
+            <p className="text-center my-5">{t('projetctsSubTitle')}</p>
           </section>
           <section className="w-full">
             <Projects />
@@ -156,10 +152,7 @@ function Home() {
               className="border border-black w-16 h-1 m-auto my-7
              bg-indigo-700 rounded-xl"
             />
-            <p className="text-center my-5">
-              {t('contactSubTitle')}
-            </p>
-
+            <p className="text-center my-5">{t('contactSubTitle')}</p>
           </section>
           <section className="w-full">
             <Contacts />

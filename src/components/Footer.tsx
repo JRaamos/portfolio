@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 function Footer() {
@@ -13,32 +12,22 @@ function Footer() {
     >
       <div className="mt-20 w-[70%] flex justify-between">
         <div>
-          <h2 className="font-mono font-semibold text-xl">
-            Jonathan Febraio
-          </h2>
+          <h2 className="font-mono font-semibold text-xl">Jonathan Febraio</h2>
           <p className="max-w-[56vh] w-full font-mono text-sm">
             {t('footerApresentation')}
           </p>
         </div>
         <div className="">
-          <h2 className="font-mono font-semibold text-xl">
-            Social
-          </h2>
+          <h2 className="font-mono font-semibold text-xl">Social</h2>
           <Link
             to="https://www.linkedin.com/in/jonathan-febraio-dev/"
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon
-              icon={ faLinkedin }
-              className="h-8 m-2"
-            />
+            <FontAwesomeIcon icon={ faLinkedin } className="h-8 m-2" />
           </Link>
           <Link to="https://github.com/JRaamos" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon
-              icon={ faGithub }
-              className="h-8 m-2"
-            />
+            <FontAwesomeIcon icon={ faGithub } className="h-8 m-2" />
           </Link>
         </div>
       </div>

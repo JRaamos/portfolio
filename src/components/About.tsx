@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-max-depth */
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Skills from './Skills';
 
@@ -7,23 +6,18 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <div
-      className=" w-full flex max-lg:flex-col justify-evenly"
-    >
+    <div className=" w-full flex max-lg:flex-col justify-evenly">
       <div
         className="flex flex-col
        items-center justify-center w-[90vh] max-2xl:w-[65%]
         m-11 max-lg:w-[100%] max-lg:m-0"
       >
-
         <section
           className="flex flex-col justify-center max-2xl:w-[70vh]
           max-xl:w-[60vh] max-lg:w-[90%]
            w-full"
         >
-          <h2 className="text-3xl font-semibold font-serif">
-            {t('aboutTextInto')}
-          </h2>
+          <h2 className="text-3xl font-semibold font-serif">{t('aboutTextInto')}</h2>
 
           <div className="my-4">
             {/* <p className="text-xl italic font-semibold w-full">{t('aboutTextInto')}</p> */}
@@ -69,9 +63,7 @@ function About() {
         </section>
       </div>
       <section className="w-[67vh] m-11 max-lg:w-[95%] mx-6">
-        <h2 className="mx-5 font-serif font-semibold text-3xl">
-          Skills
-        </h2>
+        <h2 className="mx-5 font-serif font-semibold text-3xl">Skills</h2>
         <section
           className=" max-2xl:w-[95%]
            max-lg:w-[100%]
@@ -80,7 +72,6 @@ function About() {
           <Skills />
         </section>
       </section>
-
     </div>
   );
 }

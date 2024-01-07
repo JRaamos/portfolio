@@ -12,65 +12,55 @@ export default function Header() {
 
   return (
     <div className="flex items-center shadow-md">
-
       <div
         className="h-14 w-full
         flex items-center justify-around"
       >
         <div className="flex justify-evenly w-60">
-
           <p className="text-2xl font-mono ">Jonathan Febraio</p>
         </div>
 
-        {
-        width < 768 ? <Hamburger />
-
-          : (
-            <nav className="flex justify-between w-80">
-
-              <Link to="/">
-                <p
-                  className="border-b-4 hover:border-indigo-700
-                  transition-all border-transparent"
-                >
-                  {t('home')}
-
-                </p>
-              </Link>
-
-              { location.pathname === '/' && (
-                <a
-                  href="#about"
-                  className="border-b-4 hover:border-indigo-700
-                  transition-all border-transparent"
-                >
-                  {t('about')}
-
-                </a>
-              )}
-
-              <a
-                href="#projects"
+        {width < 768 ? (
+          <Hamburger />
+        ) : (
+          <nav className="flex justify-between w-80">
+            <Link to="/">
+              <p
                 className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
               >
-                {t('project')}
+                {t('home')}
+              </p>
+            </Link>
 
-              </a>
+            {location.pathname === '/' && (
               <a
-                href="#contact"
+                href="#about"
                 className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
               >
-                {t('contact')}
-
+                {t('about')}
               </a>
+            )}
 
-            </nav>
-          )
-}
+            <a
+              href="#projects"
+              className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+            >
+              {t('project')}
+            </a>
+            <a
+              href="#contact"
+              className="border-b-4 hover:border-indigo-700
+                  transition-all border-transparent"
+            >
+              {t('contact')}
+            </a>
+          </nav>
+        )}
       </div>
-      { width > 768 && (
+      {width > 768 && (
         <div className="flex justify-between w-52 mx-3">
           <Lenguage />
           <ThemeToggleButton />
