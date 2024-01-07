@@ -37,5 +37,6 @@
   "message": "Digite sua mensagem",
   "buttonSubmit": "Enviar",
   "footerApresentation": "Um desenvolvedor FullStack apaixonado por tecnologia e programação sempre em busca de novos desafios e conhecimentos.",
-  "success": "Mensagem enviada com sucesso!"
+  "success": "Mensagem enviada com sucesso!",
+  "error": "Erro ao enviar mensagem!"
 }

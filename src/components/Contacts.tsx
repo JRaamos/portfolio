@@ -60,7 +60,6 @@ function Contacts() {
           className="flex flex-col max-w-[70vh] p-6 items-center
           rounded-lg shadow-lg bg-[#fffffffb] w-[90%] dark:bg-slate-600"
         >
-
           <div className="flex flex-col w-[95%] max-w-[60vh]">
             <div className="flex justify-between items-center  mt-2">
               <label htmlFor="name" className="font-mono">
@@ -70,24 +69,30 @@ function Contacts() {
                 isSent
                  && (
                    <p
-                     className="text-indigo-700
-                font-bold font-mono transition-all"
+                     className="text-indigo-700 font-bold font-mono transition-all"
                    >
                      { t('success') }
                    </p>
                  )
               }
               {
+                isError
+                 && (
+                   <p
+                     className="text-red-700 font-bold font-mono transition-all"
+                   >
+                     { t('error') }
+                   </p>
+                 )
+              }
+              {
                 isLoading ? (
                   <div className="loading-spinner w-10 h-10 mb-1" />
-
                 ) : (
                   <div className="w-10 h-10 mb-1" />
                 )
               }
-
             </div>
-
             <input
               type="text"
               id="name"
@@ -119,7 +124,7 @@ function Contacts() {
             </label>
             <textarea
               id="message"
-              className="h-52 p-2 rounded-lg bg-[#e0e1ffd5] dark:bg-slate-500"
+              className="h-64 p-2 rounded-lg bg-[#e0e1ffd5] dark:bg-slate-500 resize-none"
               maxLength={ 500 }
               required
               placeholder={ t('message') }
