@@ -14,11 +14,7 @@ function Lenguage() {
       <button
         type="button"
         className={ `w-12 h-12 flex items-center mr-3
-           ${
-             language === 'pt'
-               ? 'bg-amber-200 hover:scale-110 transition-all'
-               : 'hover:scale-110 transition-all'
-        } rounded-lg` }
+         hover:scale-110 transition-all shadow-2xl` }
         onClick={ () => {
           i18n.changeLanguage('pt');
           localStorage.setItem('language', 'pt');
@@ -31,11 +27,7 @@ function Lenguage() {
       <button
         type="button"
         className={ `w-12 h-12 flex items-center
-           ${
-             language === 'en'
-               ? 'bg-amber-200 hover:scale-110 transition-all'
-               : 'hover:scale-110 transition-all'
-        } rounded-lg` }
+         hover:scale-110 transition-all` }
         onClick={ () => {
           i18n.changeLanguage('en');
           localStorage.setItem('language', 'en');
