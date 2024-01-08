@@ -22,11 +22,15 @@ function Skills() {
     'Express',
   ];
   return (
-    <section className="w-full max-lg:w-[90%] flex flex-wrap items-center">
+    <section
+      className="w-full max-lg:w-[90%] flex flex-wrap items-center justify-center
+    max-[450px]:items-center max-[450px]:w-full"
+    >
       {skils.map((skill) => (
         <div
           key={ skill }
           className="flex flex-col items-center justify-center
+           max-[415px]:m-2
         m-4"
         >
           <p
