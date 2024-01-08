@@ -13,9 +13,11 @@ import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
 import curriculo from '../utils/Curriculo_Jonathan.pdf';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [width] = useWindowSize();
 
   const { t } = useTranslation();
   const handleClick = () => {
@@ -47,22 +49,29 @@ function Home() {
       <header>
         <Header />
       </header>
-      <div className="mouse w-[20px] h-[40px] border border-black dark:border-white">
-        <div className="ponto  w-1.5 h-1.5 bg-indigo-700 dark:bg-indigo-300" />
-      </div>
-      <main>
+      {/* mause */}
+
+      {
+  width > 420 && (
+    <div className="mouse w-[20px] h-[40px] border border-black dark:border-white">
+      <div className="ponto  w-1.5 h-1.5 bg-indigo-700 dark:bg-indigo-300" />
+    </div>
+  )
+}
+      {/* inicio do conteudo */}
+      <main className="max-[415px]:mt-16 max-[380px]:mt-24">
         <section
           className="flex
-      m-auto justify-around h-[calc(83vh)] items-center
+      m-auto justify-around h-[calc(83vh)] min-[450px]:items-center  max-md:justify-center
        max-md:flex-col max-md: max-screen w-full max-[375px]:h-[calc(90vh)]
         max-w-[115rem]"
         >
           <section
-            className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4"
+            className="max-md:w-[calc(65%)]  w-1/3 min-[1990px]:w-1/4 max-[450px]:m-auto "
           >
             <img src={ euDev } alt="Jonathan Febraio" className="rounded-full mb-5 " />
           </section>
-          <section className="max-md:w-[calc(80%)]  w-1/2 pl-8  ">
+          <section className="max-md:w-[calc(90%)]  w-1/2 pl-8 max-[415px]: ">
             <p className="text-4xl font-mono font-bold text-center m-10">
               {t('presentation')}
             </p>
