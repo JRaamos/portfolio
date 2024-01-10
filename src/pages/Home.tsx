@@ -13,6 +13,7 @@ import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
 import curriculo from '../utils/Curriculo_Jonathan.pdf';
+import curriculoEn from '../utils/curiculo_jonathan_en.pdf';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 function Home() {
@@ -41,6 +42,11 @@ function Home() {
   }, []);
 
   const handleDownload = () => {
+    const lenguage = localStorage.getItem('language');
+    if (lenguage === 'en') {
+      saveAs(curriculoEn, 'Febraio-Jonathan.pdf');
+      return;
+    }
     saveAs(curriculo, 'Jonathan-Febraio.pdf');
   };
 
