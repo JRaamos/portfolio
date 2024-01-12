@@ -38,5 +38,7 @@
   "buttonSubmit": "Enviar",
   "footerApresentation": "Um desenvolvedor FullStack apaixonado por tecnologia e programação sempre em busca de novos desafios e conhecimentos.",
   "success": "Mensagem enviada com sucesso!",
-  "error": "Erro ao enviar mensagem!"
+  "error": "Erro ao enviar mensagem!",
+  "detailsInto": "Esta página contém detalhes do projeto",
+  "detailsInto2": "uma visão geral do porquê ele foi feito, ferramentas e tecnologias utilizadas e links ativos para acessar o deploy do projeto e seus códigos."
 }

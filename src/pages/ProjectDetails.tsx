@@ -9,7 +9,6 @@ function ProjectDetails() {
   const location = useLocation();
   const { id } = useParams();
   const { t } = useTranslation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -20,10 +19,19 @@ function ProjectDetails() {
         <Header />
       </header>
       <main className="h-[100vh]">
-        <div className="flex justify-center items-center flex-col">
-          <p className="text-2xl font-bold">{projectsDetails[Number(id)].title}</p>
+        <div className="flex justify-center items-center flex-col h-1/2">
+          <p
+            className="text-4xl font-serif
+           font-semibold"
+          >
+            {projectsDetails[Number(id)].title}
+
+          </p>
           <p>
             {t('detailsInto')}
+            {projectsDetails[Number(id)].title}
+            {' '}
+            {t('detailsInto2')}
           </p>
           <Link to={ projectsDetails[Number(id)].linkSite }>
             <button type="button">
