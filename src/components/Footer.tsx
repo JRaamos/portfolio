@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div
       className="h-[43vh] max-[450px]:h-[60vh] flex flex-col items-center
-     justify-between text-white"
+     justify-between text-white bg-slate-950"
     >
       <div
         className="mt-20 w-[70%] flex justify-between max-[450px]:flex-col

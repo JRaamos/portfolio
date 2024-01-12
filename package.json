@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.0",
     "react-router-dom": "^6.21.1",
+    "react-scroll": "^1.9.0",
     "react-sidebar": "^3.0.2"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "@types/file-saver": "^2.0.7",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
+    "@types/react-scroll": "^1.8.10",
     "@types/react-sidebar": "^3.0.4",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",

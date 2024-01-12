@@ -28,11 +28,10 @@ html {
 
 .mouse {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px;
-  animation: scrollAnimation 1.5s infinite;
 }
 
 .ponto {
@@ -42,16 +41,6 @@ html {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   animation: pontoAnimation 1s infinite;
-}
-
-@keyframes scrollAnimation {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(10px);
-  }
 }
 
 @keyframes pontoAnimation {
