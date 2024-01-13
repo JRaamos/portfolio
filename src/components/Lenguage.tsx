@@ -13,7 +13,7 @@ function Lenguage() {
     <div className="flex">
       <button
         type="button"
-        className={ `w-12 h-12 flex items-center mr-3
+        className={ `w-10 h-10 flex items-center mr-3
          hover:scale-110 transition-all shadow-2xl` }
         onClick={ () => {
           i18n.changeLanguage('pt');
@@ -26,7 +26,7 @@ function Lenguage() {
 
       <button
         type="button"
-        className={ `w-12 h-12 flex items-center
+        className={ `w-10 h-10 flex items-center
          hover:scale-110 transition-all` }
         onClick={ () => {
           i18n.changeLanguage('en');

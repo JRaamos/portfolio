@@ -15,15 +15,17 @@ function ProjectCard({
   const description = t(`projects.project${projectId}.description`);
 
   return (
-    <div className="w-full max-w-[100rem] mt-6 p-5 flex">
+    <div
+      className="w-full max-w-[100rem] mt-6 p-5 flex"
+    >
       <div
-        className="flex max-lg:flex-col w-full justify-around
-      max-lg:justify-center max-lg:items-center"
+        className="flex max-lg:flex-col w-full justify-center
+      max-lg:justify-center max-lg:items-center "
       >
         <img
           src={ img }
           alt={ title }
-          className="w-[60vh] h-[40vh]
+          className="w-[65vh] h-[38vh]
           rounded-2xl m-4  max-lg:w-[80%] max-lg:h-[60%]"
         />
         <div className="flex flex-col w-[60vh] m-10 max-lg:w-2/3 max-lg:items-center">
@@ -31,7 +33,7 @@ function ProjectCard({
             {title}
           </h1>
           <p
-            className="font-mono text-xl max-lg:text-center
+            className="font-mono text-lg max-lg:text-center
            max-lg:w-full"
           >
             {description}

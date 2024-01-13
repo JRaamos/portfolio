@@ -28,6 +28,9 @@
     },
     "project1": {
       "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…"
+    },
+    "project2": {
+      "description": "O Projeto Receitas da Hora! É um app web de receitas tanto de comidas como de bebidas, ele permite você ver suas receitas favoritas de maneira fácil e elegante."
     }
   },
   "buttonDetails": "Ver mais",

@@ -22,26 +22,15 @@ function Carousel({ id }: { id: string | undefined }) {
 
   return (
     <Slider { ...settings }>
-      <img
-        src={ projectsDetails[Number(id)].img }
-        alt=""
-        className="rounded-2xl h-[50vh] w-full"
-      />
-      <img
-        src={ projectsDetails[Number(id)].img2 }
-        alt=""
-        className="rounded-2xl h-[50vh] w-full"
-      />
-      <img
-        src={ projectsDetails[Number(id)].img3 }
-        alt=""
-        className="rounded-2xl h-[50vh] w-full"
-      />
-      <img
-        src={ projectsDetails[Number(id)].img4 }
-        alt=""
-        className="rounded-2xl h-[50vh] w-full"
-      />
+      {
+      projectsDetails[Number(id)].imgs.map((image) => (
+        <img
+          src={ image }
+          alt={ projectsDetails[Number(id)].title }
+          className="rounded-2xl h-[50vh] w-full"
+        />
+      ))
+    }
     </Slider>
   );
 }

@@ -27,6 +27,9 @@
     },
     "project1": {
       "description": "The Portfolio project is a presentation website, it was developed to transmit information from a developer, such as information about their current position, objectives, what skills they have, etc…"
+    },
+    "project2": {
+      "description": "The Recipes of the Hour Project! It's a web app with recipes for both food and drinks, it allows you to view your favorite recipes in an easy and elegant way."
     }
   },
   "buttonDetails": "View more",

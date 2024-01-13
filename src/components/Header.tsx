@@ -67,7 +67,7 @@ export default function Header() {
         )}
       </div>
       {width > 768 && (
-        <div className="flex justify-between w-52 mx-3">
+        <div className="flex justify-between w-52 mx-3 items-center">
           <Lenguage />
           <ThemeToggleButton />
         </div>
