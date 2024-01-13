@@ -37,5 +37,8 @@
   "buttonSubmit": "Submit",
   "footerApresentation": "A FullStack developer passionate about technology and programming, always looking for new challenges and knowledge.",
   "success": "Message sent successfully!",
-  "error": "Error sending message!"
+  "error": "Error sending message!",
+  "detailsInto": "This page contains project details",
+  "detailsInto2": "an overview of why it was created, tools and technologies used and active links to access the project deployment and its codes.",
+  "siteLink": "Project Link"
 }

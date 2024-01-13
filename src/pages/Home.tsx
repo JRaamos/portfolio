@@ -165,7 +165,6 @@ function Home() {
             >
               {t('contact')}
             </h1>
-
             <p
               className="border border-black w-16 h-1 m-auto my-7
              bg-indigo-700 rounded-xl"
