@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { projectsDetails } from '../utils/projectsDetails';
 import Carousel from '../components/Carousel';
+import Skills from '../components/Skills';
 
 function ProjectDetails() {
   const { id } = useParams();
@@ -79,25 +80,67 @@ function ProjectDetails() {
           </div>
         </div>
         <div
-          className="h-[80vh]  flex items-center bg-[#c2c2c259]
-       dark:bg-slate-800 flex-col"
+          className=" flex items-center bg-[#c2c2c259]
+       dark:bg-slate-800 flex-col pb-16"
         >
-          <div className="w-[40rem] mt-10 shadow-2xl rounded-lg">
+          <div className="w-[45rem] mt-10 shadow-2xl rounded-lg">
             <Carousel id={ id } />
           </div>
           <h1 className="mt-16 text-2xl font-semibold">
             {t('detailsSubtitle')}
           </h1>
-          <p
-            className="border border-black w-16 h-1 m-auto my-5
-             bg-indigo-700 rounded-xl"
-          />
-          <p>
-            {t('detailsText')}
-          </p>
-          <p>
-            {t('detailsText2')}
-          </p>
+          <div className="w-full flex flex-col justify-center items-center font-mono  ">
+            <p
+              className="border border-black w-16 h-1 m-auto my-5
+            bg-indigo-700 rounded-xl"
+            />
+            <p className="w-[60%] my-3">
+              {t(`projects.project${id}.detailsText`)}
+            </p>
+            <p className="w-[60%] my-3">
+              {t(`projects.project${id}.detailsText2`)}
+            </p>
+            <p className="w-[60%] my-3">
+              {t(`projects.project${id}.detailsText3`)}
+            </p>
+          </div>
+          <div className=" w-2/3 flex flex-col">
+            <h1 className="mt-5 text-2xl font-semibold text-center">
+              {t('detailsTech')}
+            </h1>
+            <p
+              className="border border-black w-16 h-1 m-auto my-5
+            bg-indigo-700 rounded-xl"
+            />
+            <div>
+              <Skills skils={ projectsDetails[Number(id)].techs } />
+            </div>
+          </div>
+          <div>
+            <h1 className="mt-5 text-2xl font-semibold text-center">
+              {t('detailsLinks')}
+            </h1>
+            <div>
+              <Link to={ projectsDetails[Number(id)].linkSite } target="_blank">
+                <button
+                  type="button"
+                  className="w-48 text-xl text-white mt-4 p-1 rounded-lg
+                 bg-indigo-700"
+                >
+                  {t('siteLink')}
+                </button>
+              </Link>
+              <Link to={ projectsDetails[Number(id)].github } target="_blank">
+                <button
+                  type="button"
+                  className="w-48 text-xl text-white mt-4 p-1 rounded-lg
+                 bg-indigo-700"
+                >
+                  {t('repoLink')}
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
       </main>
       <footer>

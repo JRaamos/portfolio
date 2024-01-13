@@ -3,7 +3,7 @@ import PortfolioContext from './PortfolioContext';
 import { PortfolioProviderProps } from '../types/Portfolio.type';
 
 function PortfolioProvider({ children }: PortfolioProviderProps) {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
   const [language, setLanguage] = useState(localStorage.getItem('language') ?? 'pt');
   const [isOpen, setIsOpen] = useState(false);
 

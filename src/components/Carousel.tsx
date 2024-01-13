@@ -23,8 +23,9 @@ function Carousel({ id }: { id: string | undefined }) {
   return (
     <Slider { ...settings }>
       {
-      projectsDetails[Number(id)].imgs.map((image) => (
+      projectsDetails[Number(id)].imgs.map((image, index) => (
         <img
+          key={ index }
           src={ image }
           alt={ projectsDetails[Number(id)].title }
           className="rounded-2xl h-[50vh] w-full"

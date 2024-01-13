@@ -4,7 +4,26 @@ import Skills from './Skills';
 
 function About() {
   const { t } = useTranslation();
-
+  const skils = [
+    'Java',
+    'JavaScript',
+    'React',
+    'TypeScript',
+    'Node',
+    'Docker',
+    'Git',
+    'GitHub',
+    'HTML',
+    'CSS',
+    'SQL',
+    'Mocha',
+    'MySQL',
+    'Jest',
+    'PostgreSQL',
+    'Tailwind',
+    'React Testing Library',
+    'Express',
+  ];
   return (
     <div className=" w-full flex max-lg:flex-col justify-evenly">
       <div
@@ -69,7 +88,7 @@ function About() {
            max-lg:w-[100%]
 "
         >
-          <Skills />
+          <Skills skils={ skils } />
         </section>
       </section>
     </div>

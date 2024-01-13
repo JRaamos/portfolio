@@ -24,13 +24,20 @@
   "projectPageTitle": "Projetos",
   "projects": {
     "project0": {
-      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia,Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções."
+      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia,Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções.",
+      "detailsText": "O Sistema de Agendamentos foi desenvolvido sob medida para atender às necessidades de uma barbearia em particular. A principal proposta é permitir que os clientes realizem agendamentos dos serviços oferecidos pela barbearia de maneira prática e eficiente. Uma vez que os serviços são agendados, os clientes têm a facilidade de visualizar todos os compromissos registrados, proporcionando uma visão clara de suas próximas visitas.",
+      "detailsText2": "Além disso, a integração do sistema se estende à agenda dos barbeiros, garantindo uma gestão eficaz do tempo e dos serviços prestados. Dessa forma, tanto os clientes quanto os profissionais envolvidos têm acesso fácil e organizado aos horários reservados, contribuindo para uma experiência de agendamento mais fluida e satisfatória.",
+      "detailsText3": "Para otimizar ainda mais a interação, o sistema oferece recursos adicionais, como lembretes automatizados para os clientes, promovendo a redução de possíveis ausências e aprimorando a eficiência operacional da barbearia. Este projeto visa não apenas facilitar o agendamento, mas também aprimorar a experiência global do cliente e a eficiência interna da barbearia."
     },
     "project1": {
-      "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…"
+      "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…",
+      "detailsText": "Em construção...",
+      "detailsText2": "Em construção..."
     },
     "project2": {
-      "description": "O Projeto Receitas da Hora! É um app web de receitas tanto de comidas como de bebidas, ele permite você ver suas receitas favoritas de maneira fácil e elegante."
+      "description": "O Projeto Receitas da Hora! É um app web de receitas tanto de comidas como de bebidas, ele permite você ver suas receitas favoritas de maneira fácil e elegante.",
+      "detailsText": "Em construção...",
+      "detailsText2": "Em construção..."
     }
   },
   "buttonDetails": "Ver mais",
@@ -46,6 +53,6 @@
   "detailsInto2": "uma visão geral do porquê ele foi feito, ferramentas e tecnologias utilizadas e links ativos para acessar o deploy do projeto e seus códigos.",
   "siteLink": "Acessar site",
   "detailsSubtitle": "Visão geral do projeto",
-  "detailsText": "Em construção...",
-  "detailsText2": "Em construção..."
+  "detailsTech": "Tecnologias utilizadas",
+  "detailsLinks": "Links do projeto"
 }

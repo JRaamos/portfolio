@@ -13,13 +13,6 @@ import receitasDaHora1 from '../images/receitas-da-hora-1.png';
 import receitasDaHora2 from '../images/receitas-da-hora-2.png';
 import receitasDaHora3 from '../images/receitas-da-hora-3.png';
 import receitasDaHora4 from '../images/receitas-da-hora-4.png';
-import node from '../images/node-js.webp';
-import react from '../images/react.svg';
-import typeScript from '../images/typescript.svg';
-import rtl from '../images/RTL.png';
-import redux from '../images/redux.png';
-import css from '../images/css.svg';
-import mysql from '../images/mysql.png';
 
 export const projectsDetails = [
   {
@@ -33,36 +26,7 @@ export const projectsDetails = [
     ],
     linkSite: 'https://sistema-de-agendamento-developer.vercel.app/',
     github: 'https://github.com/JRaamos/Sistema-de-Agendamento',
-    techs: [
-      {
-        name: 'CSS',
-        image: css,
-      },
-      {
-        name: 'Node',
-        image: node,
-      },
-      {
-        name: 'TypeScript',
-        image: typeScript,
-      },
-      {
-        name: 'React',
-        image: react,
-      },
-      {
-        name: 'RTL',
-        image: rtl,
-      },
-      {
-        name: 'Redux',
-        image: redux,
-      },
-      {
-        name: 'MySQL',
-        image: mysql,
-      },
-    ],
+    techs: ['CSS', 'Node', 'TypeScript', 'React', 'RTL', 'Redux', 'MySQL'],
   },
   {
     title: ' Portifolio',
@@ -70,21 +34,13 @@ export const projectsDetails = [
     imgs: [portifolio1, portifolio2, portifolio3, portifolio4],
     linkSite: 'https://jonathan-febrail-dev.vercel.app/',
     github: 'https://github.com/JRaamos/portfolio',
-    techs: [
-      {
-        name: 'React',
-        image: react,
-      },
-      {
-        name: 'TypeScript',
-        image: typeScript,
-      },
-    ],
+    techs: ['React', 'TypeScript'],
   },
   {
     title: ' Receitas da Hora',
     img: receitasDaHora,
     imgs: [receitasDaHora1, receitasDaHora2, receitasDaHora3, receitasDaHora4],
     linkSite: 'https://receitas-da-hora.vercel.app/',
+    techs: ['React', 'TypeScript'],
   },
 ];
