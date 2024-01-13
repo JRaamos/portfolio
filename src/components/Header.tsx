@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ThemeToggleButton from './ThemeToggleButton';
 import Hamburger from './Hamburger';
@@ -6,10 +6,17 @@ import { useWindowSize } from '../hooks/useWindowSize';
 import Lenguage from './Lenguage';
 
 export default function Header() {
-  const location = useLocation();
   const { t } = useTranslation();
   const [width] = useWindowSize();
 
+  const handleLinkClick = (to: string) => {
+    setTimeout(() => {
+      const element = document.getElementById(to);
+      if (element) {
+        element.scrollIntoView();
+      }
+    }, 100);
+  };
   return (
     <div className="flex items-center shadow-md">
       <div
@@ -32,31 +39,30 @@ export default function Header() {
                 {t('home')}
               </p>
             </Link>
-
-            {location.pathname === '/' && (
-              <a
-                href="#about"
-                className="border-b-4 hover:border-indigo-700
+            <Link
+              to="/#about"
+              onClick={ () => handleLinkClick('about') }
+              className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
-              >
-                {t('about')}
-              </a>
-            )}
-
-            <a
-              href="#projects"
+            >
+              {t('about')}
+            </Link>
+            <Link
+              to="/#projects"
+              onClick={ () => handleLinkClick('projects') }
               className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
             >
               {t('project')}
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/#contact"
+              onClick={ () => handleLinkClick('contact') }
               className="border-b-4 hover:border-indigo-700
                   transition-all border-transparent"
             >
               {t('contact')}
-            </a>
+            </Link>
           </nav>
         )}
       </div>

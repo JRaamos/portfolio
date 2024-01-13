@@ -59,7 +59,10 @@ function Home() {
 
       {
   width > 420 && (
-    <div className="mouse w-[20px] h-[40px] border border-black dark:border-white">
+    <div
+      className="mouse w-[20px] h-[40px] border border-black dark:border-white
+    animate-bounce"
+    >
       <div className="ponto  w-1.5 h-1.5 bg-indigo-700 dark:bg-indigo-300" />
     </div>
   )
@@ -162,7 +165,6 @@ function Home() {
             >
               {t('contact')}
             </h1>
-
             <p
               className="border border-black w-16 h-1 m-auto my-7
              bg-indigo-700 rounded-xl"
@@ -174,7 +176,7 @@ function Home() {
           </section>
         </section>
       </main>
-      <footer className="w-full bg-slate-950">
+      <footer className="w-full ">
         <Footer />
       </footer>
     </div>

@@ -36,7 +36,11 @@ function ProjectCard({
           >
             {description}
           </p>
-          <Link to={ `/project/${projectId}` } className="w-36">
+          <Link
+            to={ `/project/${projectId}` }
+            className="w-36"
+            target="_blank"
+          >
             <button
               className="bg-indigo-700 text-white p-1 rounded-md w-36 mt-5
               hover:scale-125 transition-all"
