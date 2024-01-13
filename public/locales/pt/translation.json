@@ -41,5 +41,8 @@
   "error": "Erro ao enviar mensagem!",
   "detailsInto": "Esta página contém detalhes do projeto",
   "detailsInto2": "uma visão geral do porquê ele foi feito, ferramentas e tecnologias utilizadas e links ativos para acessar o deploy do projeto e seus códigos.",
-  "siteLink": "Acessar site"
+  "siteLink": "Acessar site",
+  "detailsSubtitle": "Visão geral do projeto",
+  "detailsText": "Em construção...",
+  "detailsText2": "Em construção..."
 }
