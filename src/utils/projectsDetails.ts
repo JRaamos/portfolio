@@ -34,13 +34,16 @@ export const projectsDetails = [
     imgs: [portifolio1, portifolio2, portifolio3, portifolio4],
     linkSite: 'https://jonathan-febrail-dev.vercel.app/',
     github: 'https://github.com/JRaamos/portfolio',
-    techs: ['React', 'TypeScript'],
+    techs: ['React', 'TypeScript', 'Tailwind', 'Git',
+      'GitHub', 'Vercel', 'HTML', 'Context API', 'i18next'],
   },
   {
     title: ' Receitas da Hora',
     img: receitasDaHora,
     imgs: [receitasDaHora1, receitasDaHora2, receitasDaHora3, receitasDaHora4],
     linkSite: 'https://receitas-da-hora.vercel.app/',
-    techs: ['React', 'TypeScript'],
+    github: 'https://github.com/JRaamos/receitas-da-hora',
+    techs: ['React', 'JavaScript', 'CSS', 'HTML', 'Git', 'GitHub', 'Vercel',
+      'Redux', 'RTL', 'Gravatar'],
   },
 ];

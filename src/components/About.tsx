@@ -9,6 +9,7 @@ function About() {
     'JavaScript',
     'React',
     'TypeScript',
+    'React Testing Library',
     'Node',
     'Docker',
     'Git',
@@ -16,13 +17,14 @@ function About() {
     'HTML',
     'CSS',
     'SQL',
+    'PostgreSQL',
     'Mocha',
     'MySQL',
     'Jest',
-    'PostgreSQL',
     'Tailwind',
-    'React Testing Library',
     'Express',
+    'Sequelize',
+    'CI/CD',
   ];
   return (
     <div className=" w-full flex max-lg:flex-col justify-evenly">

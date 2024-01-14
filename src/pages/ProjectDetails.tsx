@@ -72,7 +72,7 @@ function ProjectDetails() {
               <button
                 type="button"
                 className="w-48 text-xl text-white mt-4 p-1 rounded-lg
-                 bg-indigo-700"
+                 bg-indigo-700 hover:scale-110 transition-all"
               >
                 {t('siteLink')}
               </button>
@@ -124,8 +124,8 @@ function ProjectDetails() {
               <Link to={ projectsDetails[Number(id)].linkSite } target="_blank">
                 <button
                   type="button"
-                  className="w-48 text-xl text-white mt-4 p-1 rounded-lg
-                 bg-indigo-700"
+                  className="w-48 text-xl text-white m-4 p-1 rounded-lg
+                 bg-indigo-700 hover:scale-110 transition-all"
                 >
                   {t('siteLink')}
                 </button>
@@ -133,10 +133,10 @@ function ProjectDetails() {
               <Link to={ projectsDetails[Number(id)].github } target="_blank">
                 <button
                   type="button"
-                  className="w-48 text-xl text-white mt-4 p-1 rounded-lg
-                 bg-indigo-700"
+                  className="w-48 text-xl text-white m-4 p-1 rounded-lg
+                 bg-indigo-700 hover:scale-110 transition-all"
                 >
-                  {t('repoLink')}
+                  {t('detailsRepo')}
                 </button>
               </Link>
             </div>

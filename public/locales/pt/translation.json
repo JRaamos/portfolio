@@ -31,13 +31,15 @@
     },
     "project1": {
       "description": "O projeto Portfólio é um site de apresentação, ele foi desenvolvido para transmitir informações de um desenvolvedor como por exemplo informações sobre, cargo atual, objetivos, quais Habilidades possui, etc…",
-      "detailsText": "Em construção...",
-      "detailsText2": "Em construção..."
+      "detailsText": "O projeto Portfólio consiste em um website de apresentação meticulosamente desenvolvido para transmitir informações essenciais sobre um desenvolvedor de maneira simples e direta.",
+      "detailsText2": "Entre as informações destacadas estão detalhes sobre o cargo atual, objetivos profissionais e um inventário das habilidades que o desenvolvedor possui. Além disso, o site oferece a funcionalidade de download do currículo do desenvolvedor, proporcionando aos visitantes uma maneira conveniente de obter informações detalhadas sobre sua trajetória profissional.",
+      "detailsText3": "A interação é facilitada por meio de uma área de contato integrada, onde os visitantes podem enviar mensagens diretamente ao desenvolvedor. Isso não apenas simplifica a comunicação, mas também promove uma experiência mais envolvente para aqueles que exploram o portfólio. O design simples e a disposição estratégica das informações visam oferecer uma visão completa e impactante do perfil profissional do desenvolvedor, contribuindo para oportunidades futuras e conexões profissionais."
     },
     "project2": {
       "description": "O Projeto Receitas da Hora! É um app web de receitas tanto de comidas como de bebidas, ele permite você ver suas receitas favoritas de maneira fácil e elegante.",
-      "detailsText": "Em construção...",
-      "detailsText2": "Em construção..."
+      "detailsText": "O Projeto Receitas da Hora! é um aplicativo web de receitas, abrangendo tanto pratos quanto bebidas. Este aplicativo oferece uma maneira fácil e elegante de visualizar suas receitas favoritas.",
+      "detailsText2": "Desenvolvido com um layout otimizado para dispositivos móveis, o aplicativo é projetado para proporcionar uma experiência intuitiva, mas seu design responsivo garante uma adaptação perfeita para aqueles que preferem explorá-lo em um computador.",
+      "detailsText3": "Com uma interface amigável, os usuários podem navegar pelas categorias de receitas, descobrir novos pratos, e até mesmo salvar suas receitas preferidas para referência futura. A praticidade é a chave, e o aplicativo visa tornar a experiência de descobrir, compartilhar e experimentar receitas uma jornada agradável e acessível para todos os usuários, independentemente do dispositivo que escolham utilizar."
     }
   },
   "buttonDetails": "Ver mais",
@@ -54,5 +56,6 @@
   "siteLink": "Acessar site",
   "detailsSubtitle": "Visão geral do projeto",
   "detailsTech": "Tecnologias utilizadas",
-  "detailsLinks": "Links do projeto"
+  "detailsLinks": "Links do projeto",
+  "detailsRepo": "Acessar repositório"
 }
