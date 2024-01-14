@@ -30,7 +30,6 @@ export default function Header() {
               transition-all dark:hover:text-violet-600"
             >
               Jonathan Febraio
-
             </p>
           </div>
         </Link>

@@ -83,7 +83,7 @@ function ProjectDetails() {
           className=" flex items-center bg-[#c2c2c259]
        dark:bg-slate-800 flex-col pb-16"
         >
-          <div className="w-[45rem] mt-10 shadow-2xl rounded-lg">
+          <div className=" mt-10 shadow-2xl rounded-lg max-[840px]:w-[80%] w-[45rem] ">
             <Carousel id={ id } />
           </div>
           <h1 className="mt-16 text-2xl font-semibold">
@@ -120,7 +120,7 @@ function ProjectDetails() {
             <h1 className="mt-5 text-2xl font-semibold text-center">
               {t('detailsLinks')}
             </h1>
-            <div>
+            <div className="flex max-[480px]:flex-col">
               <Link to={ projectsDetails[Number(id)].linkSite } target="_blank">
                 <button
                   type="button"
