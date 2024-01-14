@@ -1,26 +1,6 @@
 import React from 'react';
 
-function Skills() {
-  const skils = [
-    'Java',
-    'JavaScript',
-    'React',
-    'TypeScript',
-    'Node',
-    'Docker',
-    'Git',
-    'GitHub',
-    'HTML',
-    'CSS',
-    'SQL',
-    'Mocha',
-    'MySQL',
-    'Jest',
-    'PostgreSQL',
-    'Tailwind',
-    'React Testing Library',
-    'Express',
-  ];
+function Skills({ skils }: { skils: string[] }) {
   return (
     <section
       className="w-full max-lg:w-[90%] flex flex-wrap items-center justify-center

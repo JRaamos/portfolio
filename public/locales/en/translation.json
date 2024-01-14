@@ -23,10 +23,22 @@
   "projetctsSubTitle": "Here you will find some of the personal and client projects I have created, each project containing its details and technologies used.",
   "projects": {
     "project0": {
-      "description": "The Scheduling System project is a full stack application developed for a client who owns a barbershop. It allows customers to book appointments for haircuts, shaves and other services offered by the barbershop in a convenient way, in addition to other functions."
+      "description": "The Scheduling System project is a full stack application developed for a client who owns a barbershop. It allows customers to book appointments for haircuts, shaves and other services offered by the barbershop in a convenient way, in addition to other functions.",
+      "detailsText": "The Scheduling System was custom developed to meet the needs of a particular barbershop. The main proposal is to allow customers to schedule services offered by the barbershop in a practical and efficient way. Once services are scheduled, clients have the ease of viewing all recorded appointments, providing a clear view of their upcoming visits.",
+      "detailsText2": "Furthermore, system integration extends to barbers' schedules, ensuring effective management of time and services provided. This way, both clients and professionals involved have easy and organized access to reserved times, contributing to a more fluid and satisfactory scheduling experience.",
+      "detailsText3": "To further optimize interaction, the system offers additional features, such as automated reminders for customers, reducing possible absences and improving the barbershop's operational efficiency. This project aims to not only facilitate scheduling, but also improve the overall customer experience and the barbershop's internal efficiency."
     },
     "project1": {
-      "description": "The Portfolio project is a presentation website, it was developed to transmit information from a developer, such as information about their current position, objectives, what skills they have, etc…"
+      "description": "The Portfolio project is a presentation website, it was developed to transmit information from a developer, such as information about their current position, objectives, what skills they have, etc…",
+      "detailsText": "The Portfolio project consists of a presentation website meticulously designed to convey essential information about a developer in a simple and direct way.",
+      "detailsText2": "Among the information highlighted are details about the current position, professional goals and an inventory of the skills the developer possesses. Additionally, the site offers developer resume download functionality, providing visitors with a convenient way to obtain detailed information about their career path.",
+      "detailsText3": "Interaction is facilitated through an integrated contact area where visitors can message the developer directly. This not only simplifies communication, but also promotes a more engaging experience for those exploring the portfolio. The simple design and strategic arrangement of information aim to offer a complete and impactful view of the developer's professional profile, contributing to future opportunities and professional connections."
+    },
+    "project2": {
+      "description": "The Recipes of the Hour Project! It's a web app with recipes for both food and drinks, it allows you to view your favorite recipes in an easy and elegant way.",
+      "detailsText": "The Recipes of the Hour Project! It's a web app with recipes for both food and drinks, it allows you to view your favorite recipes in an easy and elegant way.",
+      "detailsText2": "Developed with a mobile-optimized layout, the app is designed to provide an intuitive experience, but its responsive design ensures a seamless adaptation for those who prefer to explore it on a computer.",
+      "detailsText3": "With a user-friendly interface, users can browse recipe categories, discover new dishes, and even save their favorite recipes for future reference. Convenience is key, and the app aims to make the experience of discovering, sharing and trying recipes an enjoyable and accessible journey for all users, regardless of the device they choose to use."
     }
   },
   "buttonDetails": "View more",
@@ -40,8 +52,9 @@
   "error": "Error sending message!",
   "detailsInto": "This page contains project details",
   "detailsInto2": "an overview of why it was created, tools and technologies used and active links to access the project deployment and its codes.",
-  "siteLink": "Project Link",
+  "siteLink": "Project link",
   "detailsSubtitle": "Project overview",
-  "detailsText": "In construction...",
-  "detailsText2": "In construction..."
+  "detailsTech": "Technologies used",
+  "detailsLinks": "Project links",
+  "detailsRepo": "Repository link"
 }

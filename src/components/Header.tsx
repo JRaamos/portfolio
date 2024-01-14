@@ -23,10 +23,17 @@ export default function Header() {
         className="h-14 w-full
         flex items-center justify-around"
       >
-        <div className="flex justify-evenly w-60">
-          <p className="text-2xl font-mono ">Jonathan Febraio</p>
-        </div>
+        <Link to="/" target="_blank">
+          <div className="flex justify-evenly w-60">
+            <p
+              className="text-2xl font-mono hover:text-violet-900
+              transition-all dark:hover:text-violet-600"
+            >
+              Jonathan Febraio
 
+            </p>
+          </div>
+        </Link>
         {width < 768 ? (
           <Hamburger />
         ) : (
@@ -67,7 +74,7 @@ export default function Header() {
         )}
       </div>
       {width > 768 && (
-        <div className="flex justify-between w-52 mx-3">
+        <div className="flex justify-between w-52 mx-3 items-center">
           <Lenguage />
           <ThemeToggleButton />
         </div>
