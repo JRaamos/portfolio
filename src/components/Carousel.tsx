@@ -28,7 +28,8 @@ function Carousel({ id }: { id: string | undefined }) {
           key={ index }
           src={ image }
           alt={ projectsDetails[Number(id)].title }
-          className="rounded-2xl h-[50vh] w-full"
+          className="rounded-2xl h-[50vh] w-full max-[840px]:h-[40vh]
+          max-sm:h-[37vh] max-[570px]:h-[30vh] max-[450px]:h-[25vh] max-[379px]:h-[22vh]"
         />
       ))
     }
