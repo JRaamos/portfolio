@@ -57,5 +57,6 @@
   "detailsSubtitle": "Visão geral do projeto",
   "detailsTech": "Tecnologias utilizadas",
   "detailsLinks": "Links do projeto",
-  "detailsRepo": "Acessar repositório"
+  "detailsRepo": "Acessar repositório",
+  "inputError": "Preencha todos os campos!"
 }

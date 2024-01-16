@@ -56,5 +56,6 @@
   "detailsSubtitle": "Project overview",
   "detailsTech": "Technologies used",
   "detailsLinks": "Project links",
-  "detailsRepo": "Repository link"
+  "detailsRepo": "Repository link",
+  "inputError": "Please fill in all fields!"
 }
