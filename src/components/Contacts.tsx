@@ -53,16 +53,16 @@ function Contacts() {
 
   const handleValidat = () => {
     const re = /[A-Za-z0-9]+@[A-Za-z]+\.com/i;
-    if (!name || !email || !message) {
-      setInputErrors(true);
-      return;
-    }
+
     return re.test(email);
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
+    if (!name || !email || !message) {
+      setInputErrors(true);
+      return;
+    }
     if (!handleValidat()) {
       setInputErrors(false);
       setValidEmail(true);
