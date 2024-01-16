@@ -24,7 +24,7 @@ export const projectsDetails = [
       sistemaDeAgemdamentos3,
       sistemaDeAgemdamentos4,
     ],
-    linkSite: 'https://sistema-de-agendamento-developer.vercel.app/',
+    linkSite: 'https://stylus-barbearia-chuca.vercel.app/',
     github: 'https://github.com/JRaamos/Sistema-de-Agendamento',
     techs: ['CSS', 'Node', 'TypeScript', 'React', 'RTL', 'Redux', 'MySQL'],
   },
