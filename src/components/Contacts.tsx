@@ -10,8 +10,17 @@ function Contacts() {
   const [isSent, setIsSent] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [inputErrors, setInputErrors] = useState(false);
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (inputErrors) {
+      setTimeout(() => {
+        setInputErrors(false);
+      }, 4000);
+    }
+  }, [inputErrors]);
 
   useEffect(() => {
     if (isSent) {
@@ -23,6 +32,10 @@ function Contacts() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      setInputErrors(true);
+      return;
+    }
 
     const templateParams = {
       from_name: name,
@@ -46,7 +59,6 @@ function Contacts() {
       setMessage('');
     } else {
       setIsSent(false);
-      console.log(result.text);
       setIsError(true);
     }
     setIsLoading(false);
@@ -75,6 +87,11 @@ function Contacts() {
               {isError && (
                 <p className="text-red-700 font-bold font-mono transition-all">
                   {t('error')}
+                </p>
+              )}
+              {inputErrors && (
+                <p className="text-red-700 font-bold font-mono transition-all">
+                  {t('inputError')}
                 </p>
               )}
               {isLoading ? (
