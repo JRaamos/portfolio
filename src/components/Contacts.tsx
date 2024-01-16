@@ -11,6 +11,12 @@ function Contacts() {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [inputErrors, setInputErrors] = useState(false);
+  const [validEmail, setValidEmail] = useState(false);
+  const templateParams = {
+    from_name: name,
+    message,
+    email,
+  };
 
   const { t } = useTranslation();
 
@@ -21,27 +27,48 @@ function Contacts() {
       }, 4000);
     }
   }, [inputErrors]);
-
   useEffect(() => {
     if (isSent) {
       setTimeout(() => {
         setIsSent(false);
-      }, 3000);
+      }, 4000);
     }
   }, [isSent]);
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (validEmail) {
+      setTimeout(() => {
+        setValidEmail(false);
+      }, 3000);
+    }
+  }, [validEmail]);
+
+  useEffect(() => {
+    if (isError) {
+      setTimeout(() => {
+        setIsError(false);
+      }, 3000);
+    }
+  }, [isError]);
+
+  const handleValidat = () => {
+    const re = /[A-Za-z0-9]+@[A-Za-z]+\.com/i;
     if (!name || !email || !message) {
       setInputErrors(true);
       return;
     }
+    return re.test(email);
+  };
 
-    const templateParams = {
-      from_name: name,
-      message,
-      email,
-    };
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    if (!handleValidat()) {
+      setInputErrors(false);
+      setValidEmail(true);
+      return;
+    }
+    setValidEmail(false);
 
     setIsLoading(true);
     const result = await emailjs.send(
@@ -92,6 +119,11 @@ function Contacts() {
               {inputErrors && (
                 <p className="text-red-700 font-bold font-mono transition-all">
                   {t('inputError')}
+                </p>
+              )}
+              {validEmail && (
+                <p className="text-red-700 font-bold font-mono transition-all">
+                  {t('validEmail')}
                 </p>
               )}
               {isLoading ? (

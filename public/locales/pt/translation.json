@@ -58,5 +58,6 @@
   "detailsTech": "Tecnologias utilizadas",
   "detailsLinks": "Links do projeto",
   "detailsRepo": "Acessar repositório",
-  "inputError": "Preencha todos os campos!"
+  "inputError": "Preencha todos os campos!",
+  "validEmail": "Digite um email válido!"
 }
