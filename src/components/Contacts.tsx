@@ -39,7 +39,7 @@ function Contacts() {
     if (validEmail) {
       setTimeout(() => {
         setValidEmail(false);
-      }, 3000);
+      }, 4000);
     }
   }, [validEmail]);
 
@@ -47,7 +47,7 @@ function Contacts() {
     if (isError) {
       setTimeout(() => {
         setIsError(false);
-      }, 3000);
+      }, 4000);
     }
   }, [isError]);
 
