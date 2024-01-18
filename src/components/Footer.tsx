@@ -38,15 +38,15 @@ function Footer() {
         <p className="m-6 text-center">
           © Copyright 2024. Made by
           {' '}
-          <a
-            href="https://jonathan-febrail-dev.vercel.app/"
+          <Link
+            to="https://jonathanfebraio.com/"
             target="_blank"
             rel="noreferrer noopener"
             className="transition duration-3 underline
               font-bold font-mono"
           >
             Jonathan Febraio
-          </a>
+          </Link>
         </p>
       </div>
     </div>
