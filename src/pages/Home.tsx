@@ -40,13 +40,17 @@ function Home() {
     };
   }, []);
 
-  const handleDownload = () => {
-    const lenguage = localStorage.getItem('language');
-    if (lenguage === 'en') {
-      saveAs(curriculoEn, 'Febraio-Jonathan.pdf');
-      return;
+  const handleDownload = async () => {
+    const language = localStorage.getItem('language');
+    const fileName = language === 'en' ? 'Febraio-Jonathan.pdf' : 'Jonathan-Febraio.pdf';
+
+    try {
+      const response = await fetch(language === 'en' ? curriculoEn : curriculo);
+      const blob = await response.blob();
+      saveAs(blob, fileName);
+    } catch (error) {
+      console.error('Error fetching or saving the file:', error);
     }
-    saveAs(curriculo, 'Jonathan-Febraio.pdf');
   };
 
   return (
