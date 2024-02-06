@@ -15,7 +15,7 @@
   "aboutExperienceInto": "Habilidades e Expertise:",
   "aboutTextExperience": "Hoje, sou um desenvolvedor Full Stack com um interesse especial no Back-end mas confortavel com Front-end. Minha abordagem é sempre orientada para a solução, buscando escrever códigos limpos e eficientes. Estou sempre pronto para enfrentar desafios complexos, especialmente aqueles que me permitem inovar e aprender.",
   "aboutObjectivesInto": "Objetivos Fulturos:",
-  "aboutTextObjectives": "Meu objetivo é me tornar um desenvolvedor sênior, liderando projetos que não apenas resolvam problemas reais, mas também inspirem e inovem. Paralelamente, estou me dedicando a melhorar meu inglês, pois acredito que isso abrirá novas portas e oportunidades no cenário global da tecnologia.",
+  "aboutTextObjectives": "Meu objetivo é aprofundar cada vez mais meu conhecimento em tecnologia e programação, para liderar projetos que não apenas resolvam problemas reais, mas também inspirem e inovem.",
   "aboutcuriosityInto": "Curiosidades:",
   "aboutTextCuriosity": "Paixão por Super-Heróis: Quando não estou codificando, você provavelmente me encontrará mergulhado no universo dos super-heróis, explorando suas histórias e lições. Eu acredito que, assim como os super-heróis, todo desenvolvedor tem um superpoder único: a capacidade de criar e transformar ideias em realidade.",
   "conect": "Se você está buscando um desenvolvedor dedicado, criativo e sempre pronto para aprender, seria uma enorme satisfação conectar-me com você. Vamos juntos criar algo incrível!",
@@ -24,7 +24,7 @@
   "projectPageTitle": "Projetos",
   "projects": {
     "project0": {
-      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia,Ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções.",
+      "description": "O projeto Sistema de agendamentos é um aplicativo Full stack desenvolvido para um cliente que é dono de uma barbearia, ele permite que os clientes reservem horários para cortes de cabelo, barbas e outros serviços oferecidos pela barbearia de forma conveniente além de outras funções.",
       "detailsText": "O Sistema de Agendamentos foi desenvolvido sob medida para atender às necessidades de uma barbearia em particular. A principal proposta é permitir que os clientes realizem agendamentos dos serviços oferecidos pela barbearia de maneira prática e eficiente. Uma vez que os serviços são agendados, os clientes têm a facilidade de visualizar todos os compromissos registrados, proporcionando uma visão clara de suas próximas visitas.",
       "detailsText2": "Além disso, a integração do sistema se estende à agenda dos barbeiros, garantindo uma gestão eficaz do tempo e dos serviços prestados. Dessa forma, tanto os clientes quanto os profissionais envolvidos têm acesso fácil e organizado aos horários reservados, contribuindo para uma experiência de agendamento mais fluida e satisfatória.",
       "detailsText3": "Para otimizar ainda mais a interação, o sistema oferece recursos adicionais, como lembretes automatizados para os clientes, promovendo a redução de possíveis ausências e aprimorando a eficiência operacional da barbearia. Este projeto visa não apenas facilitar o agendamento, mas também aprimorar a experiência global do cliente e a eficiência interna da barbearia."

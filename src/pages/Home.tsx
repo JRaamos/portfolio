@@ -11,8 +11,9 @@ import euDev from '../images/eu-modelo-hd-clara.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
-import curriculo from '../utils/curriculo_Jonathan.pdf';
-import curriculoEn from '../utils/curiculo_jonathan_en.pdf';
+
+import curriculo from '../utils/curriculo_jonathan.pdf';
+import curriculoEn from '../utils/curriculo_jonathan_en.pdf';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 function Home() {
@@ -40,13 +41,17 @@ function Home() {
     };
   }, []);
 
-  const handleDownload = () => {
-    const lenguage = localStorage.getItem('language');
-    if (lenguage === 'en') {
-      saveAs(curriculoEn, 'Febraio-Jonathan.pdf');
-      return;
+  const handleDownload = async () => {
+    const language = localStorage.getItem('language');
+    const fileName = language === 'en' ? 'Febraio-Jonathan.pdf' : 'Jonathan-Febraio.pdf';
+
+    try {
+      const response = await fetch(language === 'en' ? curriculoEn : curriculo);
+      const blob = await response.blob();
+      saveAs(blob, fileName);
+    } catch (error) {
+      console.error('Error fetching or saving the file:', error);
     }
-    saveAs(curriculo, 'Jonathan-Febraio.pdf');
   };
 
   return (

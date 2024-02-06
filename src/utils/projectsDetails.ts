@@ -29,7 +29,7 @@ export const projectsDetails = [
     techs: ['CSS', 'Node', 'TypeScript', 'React', 'RTL', 'Redux', 'MySQL'],
   },
   {
-    title: ' Portifolio',
+    title: ' Portfólio',
     img: portifolio,
     imgs: [portifolio1, portifolio2, portifolio3, portifolio4],
     linkSite: 'https://jonathan-febrail-dev.vercel.app/',
