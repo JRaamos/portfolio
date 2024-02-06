@@ -11,7 +11,7 @@ import euDev from '../images/eu-modelo-hd-clara.png';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
-import curriculo from '../utils/Curriculo_Jonathan.pdf';
+import curriculo from '../utils/curriculo_Jonathan.pdf';
 import curriculoEn from '../utils/curiculo_jonathan_en.pdf';
 import { useWindowSize } from '../hooks/useWindowSize';
 
