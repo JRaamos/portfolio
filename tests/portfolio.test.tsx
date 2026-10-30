@@ -1,4 +1,9 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi, beforeEach } from "vitest";
+import emailjs from "@emailjs/browser";
+vi.mock("@emailjs/browser", () => ({ default: { send: vi.fn() } }));
+beforeEach(() => {
+  vi.clearAllMocks();
+});
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
@@ -67,26 +72,77 @@ describe("Portfolio visitor journeys", () => {
     await userEvent.click(
       screen.getByRole("button", { name: "Switch to English" }),
     );
-    expect(screen.getByText("I turn ideas into products.")).toBeTruthy();
+    expect(screen.getByText("Hello, I’m")).toBeTruthy();
     expect(document.documentElement.lang).toBe("en");
     expect(localStorage.getItem("jf-locale-v1")).toBe("en");
     await userEvent.click(
       screen.getByRole("button", { name: "Mudar para português" }),
     );
-    expect(screen.getByText("Transformo ideias em produtos.")).toBeTruthy();
+    expect(screen.getByText("Olá, eu sou o")).toBeTruthy();
   });
-  it("supports keyboard selection of technology areas", async () => {
+  it("makes all technology groups available without hidden tabs", () => {
     visit();
-    screen.getByRole("tab", { name: /Interfaces/ }).focus();
-    await userEvent.keyboard("{ArrowDown}");
+    expect(screen.queryByRole("tab")).toBeNull();
+    for (const technology of ["PostgreSQL", "AWS", "React Native", "Qdrant"])
+      expect(screen.getByText(technology)).toBeTruthy();
+  });
+  it("defaults to the light theme and persists an explicit dark choice", async () => {
+    visit();
+    expect(document.documentElement.dataset.theme).toBe("light");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Ativar tema escuro" }),
+    );
+    expect(document.documentElement.dataset.theme).toBe("dark");
+    expect(localStorage.getItem("jf-theme-v1")).toBe("dark");
+    await userEvent.click(
+      screen.getByRole("button", { name: "Ativar tema claro" }),
+    );
+    expect(document.documentElement.dataset.theme).toBe("light");
+  });
+  it("reports a rejected contact request and preserves the visitor's message", async () => {
+    vi.mocked(emailjs.send).mockRejectedValueOnce(
+      new Error("Service unavailable"),
+    );
+    visit();
+    await userEvent.type(screen.getByLabelText("Nome"), "Teste local");
+    await userEvent.type(screen.getByLabelText("E-mail"), "test@example.com");
+    await userEvent.type(
+      screen.getByLabelText("Mensagem"),
+      "Mensagem de teste local.",
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: /Enviar mensagem/ }),
+    );
+    expect((await screen.findByRole("status")).textContent).toContain(
+      "Não foi possível enviar",
+    );
+    expect(
+      (screen.getByLabelText("Mensagem") as HTMLTextAreaElement).value,
+    ).toBe("Mensagem de teste local.");
     expect(
       screen
-        .getByRole("tab", { name: /Backend/ })
-        .getAttribute("aria-selected"),
-    ).toBe("true");
-    expect(screen.getByRole("tabpanel").textContent).toContain("PostgreSQL");
-    await userEvent.keyboard("{End}");
-    expect(screen.getByRole("tabpanel").textContent).toContain("AWS");
+        .getByRole("button", { name: /Enviar mensagem/ })
+        .hasAttribute("disabled"),
+    ).toBe(false);
+  });
+  it("only shows contact success after the service accepts the request", async () => {
+    vi.mocked(emailjs.send).mockResolvedValueOnce({ status: 200, text: "OK" });
+    visit();
+    await userEvent.type(screen.getByLabelText("Nome"), "Teste local");
+    await userEvent.type(screen.getByLabelText("E-mail"), "test@example.com");
+    await userEvent.type(
+      screen.getByLabelText("Mensagem"),
+      "Mensagem de teste local.",
+    );
+    await userEvent.click(
+      screen.getByRole("button", { name: /Enviar mensagem/ }),
+    );
+    expect((await screen.findByRole("status")).textContent).toContain(
+      "Mensagem enviada",
+    );
+    expect(
+      (screen.getByLabelText("Mensagem") as HTMLTextAreaElement).value,
+    ).toBe("");
   });
   it("closes the mobile menu with Escape and returns focus", async () => {
     visit();

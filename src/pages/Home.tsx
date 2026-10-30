@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Arrow, Contact, Footer, Header } from "../components/Layout";
 import { useLocale } from "../context/Locale";
 import { usePageEffects } from "../hooks/usePageEffects";
 import { projectsDetails, stack } from "../utils/projectsDetails";
+import cvPt from "../utils/curriculo_jonathan.pdf";
+import cvEn from "../utils/curriculo_jonathan_en.pdf";
 export default function Home() {
   const { locale, t } = useLocale();
   const pt = locale === "pt";
-  const [activeStack, setActiveStack] = useState(0);
   usePageEffects(
     pt
       ? "Jonathan Febraio — Software, produtos & histórias"
@@ -21,79 +21,79 @@ export default function Home() {
       <Header />
       <main id="main">
         <section className="hero">
-          <div className="hero-photo">
-            <img
-              src="/images/jonathan.webp"
-              alt="Jonathan Febraio"
-              width="960"
-              height="960"
-              fetchPriority="high"
-            />
+          <div className="hero-portrait hero-enter">
+            <div className="portrait-circle">
+              <img
+                src="/images/jonathan-original.png"
+                alt="Jonathan Febraio"
+                width="2160"
+                height="2160"
+                fetchPriority="high"
+              />
+            </div>
+            <span className="portrait-caption">
+              <span className="status-dot" />{" "}
+              {pt ? "Desenvolvedor Full Stack" : "Full-stack developer"}
+            </span>
           </div>
-          <div className="hero-content">
-            <p className="eyebrow hero-enter">
-              <span className="status-dot" /> FULL STACK DEVELOPER ·{" "}
-              {pt ? "BRASIL" : "BRAZIL"}
+          <div className="hero-content hero-enter">
+            <p className="hero-greeting">
+              {pt ? "Olá, eu sou o" : "Hello, I’m"}
             </p>
-            <h1 className="hero-enter">
-              Jonathan
-              <br />
-              <span>
-                Febraio<span className="accent">.</span>
-              </span>
+            <h1>
+              Jonathan <span>Febraio.</span>
             </h1>
-            <div className="hero-intro hero-enter">
-              <p>
-                {pt
-                  ? "Transformo ideias em produtos."
-                  : "I turn ideas into products."}
-                <br />
-                <span>
-                  {pt
-                    ? "E desafios em novos capítulos."
-                    : "And challenges into new chapters."}
-                </span>
-              </p>
+            <p className="hero-role">
+              Full Stack Developer <span>·</span> Web & Mobile
+            </p>
+            <p className="hero-description">
+              {pt
+                ? "Gosto de transformar ideias em produtos digitais. Trabalho com interfaces, backend, aplicativos e IA, conectando tecnologia a problemas reais."
+                : "I enjoy turning ideas into digital products. I work with interfaces, backend, apps and AI, connecting technology to real problems."}
+            </p>
+            <div className="hero-actions">
               <a href="#projects" className="button-primary">
-                {pt ? "Explore meu trabalho" : "Explore my work"}
+                {pt ? "Conheça meus projetos" : "Explore my projects"}
                 <Arrow down />
+              </a>
+              <a href="#contact" className="button-secondary">
+                {pt ? "Vamos conversar" : "Let’s talk"}
+                <Arrow />
+              </a>
+            </div>
+            <div className="hero-social">
+              <a
+                href="https://github.com/JRaamos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub ↗
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jonathan-febraio-dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn ↗
+              </a>
+              <a
+                href={pt ? cvPt : cvEn}
+                download={
+                  pt ? "Jonathan-Febraio.pdf" : "Jonathan-Febraio-EN.pdf"
+                }
+              >
+                {pt ? "Baixar CV ↓" : "Download CV ↓"}
               </a>
             </div>
           </div>
-          <div className="hero-bottom">
-            <span>WEB · MOBILE · BACKEND · {pt ? "IA" : "AI"}</span>
-            <a href="#projects">
-              {pt ? "ROLE PARA DESCOBRIR" : "SCROLL TO DISCOVER"}{" "}
-              <span className="scroll-arrow">↓</span>
-            </a>
-            <span className="hero-coordinate">
-              {pt ? "CÓDIGO + PROPÓSITO" : "CODE + PURPOSE"}
-            </span>
-          </div>
-        </section>
-        <section className="intro section-pad reveal">
-          <span className="section-kicker">
-            {pt ? "DA IDEIA AO MUNDO REAL" : "FROM AN IDEA TO THE REAL WORLD"}
-          </span>
-          <p>
-            {pt ? "Mais do que escrever código," : "More than writing code,"}
-            <br />
-            <span>
-              {pt
-                ? "eu gosto de construir o que faz sentido."
-                : "I like building things that matter."}
-            </span>
-          </p>
-          <div className="intro-description">
-            <span className="mini-symbol" aria-hidden="true">
-              ✳
-            </span>
-            <p>
-              {pt
-                ? "Da primeira interface às regras que sustentam o negócio. Conecto design, desenvolvimento e infraestrutura para dar vida a produtos digitais."
-                : "From the first interface to the rules behind the business. I connect design, development and infrastructure to bring digital products to life."}
-            </p>
-          </div>
+          <a
+            className="hero-scroll"
+            href="#projects"
+            aria-label={pt ? "Rolar até os projetos" : "Scroll to projects"}
+          >
+            <span />
+            <small>{pt ? "Conheça meu trabalho" : "Discover my work"}</small>
+          </a>
         </section>
         <section id="projects" className="work section-pad">
           <div className="section-heading reveal">
@@ -255,82 +255,29 @@ export default function Home() {
           </div>
         </section>
         <section id="stack" className="stack section-pad">
-          <div className="section-heading reveal">
-            <div>
-              <p className="section-kicker">
-                03 / {pt ? "CAIXA DE FERRAMENTAS" : "TOOLBOX"}
-              </p>
-              <h2>
-                {pt ? "A tecnologia certa." : "The right technology."}
-                <br />
-                <span>{pt ? "Para cada desafio." : "For each challenge."}</span>
-              </h2>
-            </div>
+          <div className="center-heading reveal">
+            <p className="section-kicker">
+              03 / {pt ? "HABILIDADES" : "SKILLS"}
+            </p>
+            <h2>{pt ? "Tecnologias que uso" : "Technologies I work with"}</h2>
+            <span className="heading-line" />
             <p>
               {pt
-                ? "Minha stack evolui com os produtos que construo. Estas são as ferramentas que fazem parte dessa jornada."
-                : "My stack evolves with the products I build. These are the tools that are part of that journey."}
+                ? "As ferramentas que fazem parte dos meus projetos, do primeiro componente à publicação."
+                : "The tools behind my projects, from the first component to deployment."}
             </p>
           </div>
-          <div className="stack-workspace reveal">
-            <div
-              className="stack-tabs"
-              role="tablist"
-              aria-label={pt ? "Áreas de tecnologia" : "Technology areas"}
-              aria-orientation="vertical"
-            >
-              {stack.map((group, index) => (
-                <button
-                  role="tab"
-                  key={group.number}
-                  id={`stack-tab-${index}`}
-                  aria-selected={activeStack === index}
-                  aria-controls={`stack-panel-${index}`}
-                  tabIndex={activeStack === index ? 0 : -1}
-                  onClick={() => setActiveStack(index)}
-                  onKeyDown={(event) => {
-                    let next = index;
-                    if (event.key === "ArrowDown")
-                      next = (index + 1) % stack.length;
-                    else if (event.key === "ArrowUp")
-                      next = (index + stack.length - 1) % stack.length;
-                    else if (event.key === "Home") next = 0;
-                    else if (event.key === "End") next = stack.length - 1;
-                    else return;
-                    event.preventDefault();
-                    setActiveStack(next);
-                    document.getElementById(`stack-tab-${next}`)?.focus();
-                  }}
-                >
-                  <span>{group.number}</span>
-                  {t(group.title)}
-                  <Arrow />
-                </button>
-              ))}
-            </div>
-            <div
-              key={activeStack}
-              id={`stack-panel-${activeStack}`}
-              className="stack-panel"
-              role="tabpanel"
-              aria-labelledby={`stack-tab-${activeStack}`}
-              tabIndex={0}
-            >
-              <div className="stack-panel-top">
-                <span className="stack-symbol" aria-hidden="true">
-                  {["</>", "{ }", "✳", "↗"][activeStack]}
-                </span>
-                <span className="section-kicker">
-                  STACK / {stack[activeStack].number}
-                </span>
+          <div className="skills-grid">
+            {stack.map((group) => (
+              <div className="skill-group reveal" key={group.number}>
+                <h3>{t(group.title)}</h3>
+                <ul>
+                  {group.tools.map((tool) => (
+                    <li key={tool}>{tool}</li>
+                  ))}
+                </ul>
               </div>
-              <p>{t(stack[activeStack].description)}</p>
-              <ul>
-                {stack[activeStack].tools.map((tool) => (
-                  <li key={tool}>{tool}</li>
-                ))}
-              </ul>
-            </div>
+            ))}
           </div>
         </section>
         <Contact />

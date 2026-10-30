@@ -1,6 +1,6 @@
 # Jonathan Febraio — Portfólio
 
-Portfólio pessoal em português e inglês, com histórias de projetos, trajetória profissional, stack interativa e contato direto.
+Portfólio pessoal em português e inglês, com histórias de projetos, trajetória profissional, tecnologias por categoria e contato direto.
 
 Domínio principal: https://jonathanfebraio.tech
 
@@ -21,7 +21,7 @@ npm run build
 npm audit
 ```
 
-O build verifica os tipos antes de gerar `dist/`. Os testes cobrem as seis páginas de projeto, a rota legada do agendamento, rotas inválidas, troca de idioma, teclado na stack e fechamento do menu.
+O build verifica os tipos antes de gerar `dist/`. Os testes cobrem as seis páginas de projeto, a rota legada do agendamento, rotas inválidas, troca de idioma, exibição das tecnologias, tema, formulário e fechamento do menu.
 
 ## Conteúdo e experiência
 
@@ -33,7 +33,7 @@ O build verifica os tipos antes de gerar `dist/`. Os testes cobrem as seis pági
 - Fontes locais e imagens: `public/`.
 - Fontes Manrope e IBM Plex Mono distribuídas sob SIL Open Font License; licenças em `public/fonts/`.
 
-As animações respeitam `prefers-reduced-motion`. Os contatos abrem e-mail, WhatsApp e redes sociais; não há formulário com envio simulado. A preferência de idioma é opcionalmente persistida no navegador.
+As animações respeitam `prefers-reduced-motion`. O formulário mantém o serviço EmailJS usado na versão original, com validação nativa e estados de envio, sucesso e erro. Os testes de envio usam mocks e não enviam mensagens reais. E-mail direto e WhatsApp continuam disponíveis como alternativas. Preferências de idioma e tema são opcionais e persistidas no navegador.
 
 ## Publicação
 
