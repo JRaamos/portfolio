@@ -1,31 +1,32 @@
-import { Link } from 'react-router-dom';
-
-function NotFound() {
+import { Link } from "react-router-dom";
+import { Footer, Header } from "../components/Layout";
+import { useLocale } from "../context/Locale";
+import { usePageEffects } from "../hooks/usePageEffects";
+export default function NotFound() {
+  const { locale } = useLocale();
+  const pt = locale === "pt";
+  usePageEffects(
+    "404 — Jonathan Febraio",
+    pt ? "Página não encontrada." : "Page not found.",
+    "/404",
+  );
   return (
-    <div className="flex  justify-center h-[calc(70vh)] items-center">
-      <div className="">
-        <h1
-          className=" font-mono text-center text-2xl
-         dark:text-white font-semibold
-"
-        >
-          Oops! Página não encontrada
+    <>
+      <Header />
+      <main id="main" className="not-found section-pad">
+        <span className="section-kicker">
+          404 / {pt ? "ROTA NÃO ENCONTRADA" : "PAGE NOT FOUND"}
+        </span>
+        <h1>
+          {pt ? "Este capítulo" : "This chapter"}
+          <br />
+          <span>{pt ? "ainda não existe." : "does not exist yet."}</span>
         </h1>
-        <h2 className="font-mono text-center text-xl">
-          Desculpe, a página que você está procurando não existe.
-        </h2>
-        <Link to="/">
-          <h3
-            className="font-mono text-center text-base
-             dark:text-orange-300 underline font-semibold
- text-blue-900"
-          >
-            Voltar à página inicial
-          </h3>
+        <Link to="/" className="button-primary">
+          {pt ? "Voltar ao início" : "Back to home"} ↗
         </Link>
-      </div>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }
-
-export default NotFound;

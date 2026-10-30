@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# Jonathan Febraio — Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal em português e inglês, com histórias de projetos, trajetória profissional, stack interativa e contato direto.
 
-Currently, two official plugins are available:
+Domínio principal: https://jonathanfebraio.tech
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Desenvolvimento
 
-## Expanding the ESLint configuration
+Node.js 22.12 ou superior.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+npm ci
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Validação
+
+```sh
+npm test
+npm run build
+npm audit
+```
+
+O build verifica os tipos antes de gerar `dist/`. Os testes cobrem as seis páginas de projeto, a rota legada do agendamento, rotas inválidas, troca de idioma, teclado na stack e fechamento do menu.
+
+## Conteúdo e experiência
+
+- Projetos e tecnologias: `src/utils/projectsDetails.ts`.
+- Home e história: `src/pages/Home.tsx`.
+- Cases: `src/pages/ProjectDetails.tsx`.
+- Layout e contato: `src/components/Layout.tsx`.
+- Identidade e responsividade: `src/index.css`.
+- Fontes locais e imagens: `public/`.
+- Fontes Manrope e IBM Plex Mono distribuídas sob SIL Open Font License; licenças em `public/fonts/`.
+
+As animações respeitam `prefers-reduced-motion`. Os contatos abrem e-mail, WhatsApp e redes sociais; não há formulário com envio simulado. A preferência de idioma é opcionalmente persistida no navegador.
+
+## Publicação
+
+O repositório `JRaamos/portfolio` usa o projeto `portfolio` da Vercel. A produção acompanha a branch `main`, com Node.js 22. O domínio raiz é o endereço canônico; `www` redireciona para ele. DNS é administrado na Hostinger.
+
+`/project/0` redireciona para o case de agendamentos. Os cases antigos de Portfólio e Receitas da Hora foram retirados. URLs de projeto inválidas exibem uma página 404 com `noindex`.
+
+A aplicação é estática. `vercel.json` mantém o acesso direto às rotas. As páginas principais e de cases têm HTML inicial pré-renderizado, metadados próprios, sitemap e canonical.

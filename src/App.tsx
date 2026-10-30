@@ -1,19 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import PortfolioProvider from './context/PortfolioProvider';
-import ProjectDetails from './pages/ProjectDetails';
-
-function App() {
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import ProjectDetails from "./pages/ProjectDetails";
+import { LocaleProvider } from "./context/Locale";
+export default function App() {
   return (
-    <PortfolioProvider>
+    <LocaleProvider>
       <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/project/:id" element={ <ProjectDetails /> } />
-        <Route path="/*" element={ <NotFound /> } />
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-    </PortfolioProvider>
+    </LocaleProvider>
   );
 }
-
-export default App;
