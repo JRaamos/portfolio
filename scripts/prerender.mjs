@@ -13,7 +13,7 @@ const pages = [
     path: "/",
     title: "Jonathan Febraio — Software, produtos & histórias",
     description:
-      "Desenvolvedor full stack. Conheça minha história e projetos em web, mobile, backend e inteligência artificial.",
+      "Engenheiro de software. Conheça minha história e projetos em web, mobile, backend e inteligência artificial.",
     image: "/images/jonathan.webp",
   },
   ...projectsDetails.map((project) => ({

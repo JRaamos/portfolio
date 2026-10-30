@@ -1,21 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLocale } from "../context/Locale";
+import BrandMark from "./BrandMark";
+import { Icon } from "./Icon";
 import ContactForm from "./ContactForm";
-export function Arrow({ down = false }: { down?: boolean }) {
-  return (
-    <svg
-      className={down ? "arrow arrow-down" : "arrow"}
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" strokeWidth="1.6" />
-    </svg>
-  );
-}
 export function Header() {
   const { locale, toggle } = useLocale();
   const [open, setOpen] = useState(false);
@@ -57,7 +45,10 @@ export function Header() {
         {pt ? "Pular para o conteúdo" : "Skip to content"}
       </a>
       <Link className="brand" to="/">
-        Jonathan Febraio<span>.</span>
+        <BrandMark />
+        <span className="brand-wordmark">
+          Jonathan Febraio<span>.</span>
+        </span>
       </Link>
       <nav
         id="navigation"
@@ -169,8 +160,8 @@ export function Footer() {
           </Link>
           <p>
             {pt
-              ? "Desenvolvedor Full Stack. Sempre aprendendo, criando e transformando ideias em soluções."
-              : "Full-stack developer. Always learning, creating and turning ideas into solutions."}
+              ? "Engenheiro de Software. Sempre aprendendo, criando e transformando ideias em soluções."
+              : "Software engineer. Always learning, creating and turning ideas into solutions."}
           </p>
         </div>
         <div className="footer-social">
@@ -181,21 +172,21 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              GitHub ↗
+              <Icon name="github" /> GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/jonathan-febraio-dev/"
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn ↗
+              <Icon name="linkedin" /> LinkedIn
             </a>
             <a
               href="https://wa.me/5511921404143"
               target="_blank"
               rel="noreferrer"
             >
-              WhatsApp ↗
+              <Icon name="whatsapp" /> WhatsApp
             </a>
           </div>
         </div>
@@ -205,7 +196,7 @@ export function Footer() {
         <span>
           {pt ? "Feito com dedicação e código." : "Made with care and code."}
         </span>
-        <a href="#main">{pt ? "Voltar ao topo" : "Back to top"} ↑</a>
+        <a href="#main">{pt ? "Voltar ao topo" : "Back to top"}</a>
       </div>
     </footer>
   );
@@ -240,7 +231,10 @@ export function Contact() {
               : "Tell me what you’re building. Use the form or reach out to me directly."}
           </p>
           <a className="contact-email" href="mailto:jhonyramos46@gmail.com">
-            <span>E-mail</span>jhonyramos46@gmail.com <Arrow />
+            <span>
+              <Icon name="mail" /> E-mail
+            </span>
+            jhonyramos46@gmail.com
           </a>
           <a
             className="contact-whatsapp"
@@ -249,7 +243,7 @@ export function Contact() {
             rel="noreferrer"
           >
             {pt ? "Conversar pelo WhatsApp" : "Chat on WhatsApp"}
-            <Arrow />
+            <Icon name="whatsapp" />
           </a>
         </div>
         <div className="reveal">

@@ -1,5 +1,6 @@
+import { Icon } from "../components/Icon";
 import { Link } from "react-router-dom";
-import { Arrow, Contact, Footer, Header } from "../components/Layout";
+import { Contact, Footer, Header } from "../components/Layout";
 import { useLocale } from "../context/Locale";
 import { usePageEffects } from "../hooks/usePageEffects";
 import { projectsDetails, stack } from "../utils/projectsDetails";
@@ -13,8 +14,8 @@ export default function Home() {
       ? "Jonathan Febraio — Software, produtos & histórias"
       : "Jonathan Febraio — Software, products & stories",
     pt
-      ? "Desenvolvedor full stack. Conheça minha história e projetos em web, mobile, backend e inteligência artificial."
-      : "Full-stack developer. Explore my story and projects across web, mobile, backend and artificial intelligence.",
+      ? "Engenheiro de software. Conheça minha história e projetos em web, mobile, backend e inteligência artificial."
+      : "Software engineer. Explore my story and projects across web, mobile, backend and artificial intelligence.",
   );
   return (
     <>
@@ -33,7 +34,7 @@ export default function Home() {
             </div>
             <span className="portrait-caption">
               <span className="status-dot" />{" "}
-              {pt ? "Desenvolvedor Full Stack" : "Full-stack developer"}
+              {pt ? "Engenheiro de Software" : "Software engineer"}
             </span>
           </div>
           <div className="hero-content hero-enter">
@@ -44,7 +45,8 @@ export default function Home() {
               Jonathan <span>Febraio.</span>
             </h1>
             <p className="hero-role">
-              Full Stack Developer <span>·</span> Web & Mobile
+              {pt ? "Engenheiro de Software" : "Software Engineer"}{" "}
+              <span>·</span> Web, Mobile & IA
             </p>
             <p className="hero-description">
               {pt
@@ -54,11 +56,11 @@ export default function Home() {
             <div className="hero-actions">
               <a href="#projects" className="button-primary">
                 {pt ? "Conheça meus projetos" : "Explore my projects"}
-                <Arrow down />
+                <Icon name="grid" />
               </a>
               <a href="#contact" className="button-secondary">
                 {pt ? "Vamos conversar" : "Let’s talk"}
-                <Arrow />
+                <Icon name="mail" />
               </a>
             </div>
             <div className="hero-social">
@@ -67,14 +69,14 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub ↗
+                <Icon name="github" /> GitHub
               </a>
               <a
                 href="https://www.linkedin.com/in/jonathan-febraio-dev/"
                 target="_blank"
                 rel="noreferrer"
               >
-                LinkedIn ↗
+                <Icon name="linkedin" /> LinkedIn
               </a>
               <a
                 href={pt ? cvPt : cvEn}
@@ -82,7 +84,7 @@ export default function Home() {
                   pt ? "Jonathan-Febraio.pdf" : "Jonathan-Febraio-EN.pdf"
                 }
               >
-                {pt ? "Baixar CV ↓" : "Download CV ↓"}
+                <Icon name="document" /> {pt ? "Baixar CV" : "Download CV"}
               </a>
             </div>
           </div>
@@ -133,18 +135,6 @@ export default function Home() {
                     height={project.imageStyle === "timer" ? 900 : 800}
                   />
                   <span className="image-number">/{project.number}</span>
-                  {["studio", "auzen"].includes(project.imageStyle) && (
-                    <span className="image-brand">
-                      {project.imageStyle === "auzen"
-                        ? "auzen"
-                        : "febraio tech"}
-                      <small>
-                        {project.imageStyle === "auzen"
-                          ? "PET RESORT"
-                          : "SOFTWARE COM ALMA HUMANA"}
-                      </small>
-                    </span>
-                  )}
                   {project.imageStyle === "timer" && (
                     <span className="timer-note">
                       Time<span>Bubble</span>
@@ -154,16 +144,13 @@ export default function Home() {
                     </span>
                   )}
                   <span className="project-open">
-                    <Arrow />
+                    {pt ? "Ver projeto" : "View project"}
                   </span>
                 </Link>
                 <div className="project-info">
                   <span className="project-kind">{t(project.kind)}</span>
                   <Link to={`/project/${project.slug}`}>
-                    <h3>
-                      {project.title}
-                      <Arrow />
-                    </h3>
+                    <h3>{project.title}</h3>
                   </Link>
                   <p>{t(project.description)}</p>
                   <div className="tech-line">
@@ -200,7 +187,7 @@ export default function Home() {
               rel="noreferrer"
             >
               {pt ? "Minha trajetória no LinkedIn" : "My journey on LinkedIn"}{" "}
-              <Arrow />
+              <Icon name="linkedin" />
             </a>
           </div>
           <div className="story-timeline">
@@ -271,9 +258,13 @@ export default function Home() {
             {stack.map((group) => (
               <div className="skill-group reveal" key={group.number}>
                 <h3>{t(group.title)}</h3>
+                <p className="skill-description">{t(group.description)}</p>
                 <ul>
                   {group.tools.map((tool) => (
-                    <li key={tool}>{tool}</li>
+                    <li key={tool}>
+                      <Icon name={tool} />
+                      {tool}
+                    </li>
                   ))}
                 </ul>
               </div>

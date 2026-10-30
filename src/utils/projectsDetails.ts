@@ -1,13 +1,13 @@
 export type Locale = "pt" | "en";
 export type Text = Record<Locale, string>;
 export const copy = (pt: string, en: string): Text => ({ pt, en });
-export const projectsDetails = [
+const projectCatalog = [
   {
     slug: "febraio-tech",
     title: "Febraio Tech",
     number: "01",
     kind: copy("Estúdio de software", "Software studio"),
-    img: "/images/febraio-tech.jpg",
+    img: "/images/febraio-studio.webp",
     imageStyle: "studio",
     summary: copy(
       "Tecnologia com alma humana.",
@@ -22,8 +22,8 @@ export const projectsDetails = [
       "Give a software studio a distinct voice while making its services and the path to a conversation clear.",
     ),
     solution: copy(
-      "Uma experiência editorial em Next.js, com conteúdo gerenciado pelo Strapi, navegação bilíngue e um portal conectado aos serviços do projeto. A história e as imagens dão contexto antes do contato.",
-      "An editorial Next.js experience with Strapi-managed content, bilingual navigation and a portal connected to the project services. Story and imagery build context before contact.",
+      "Uma experiência editorial em Next.js, com conteúdo gerenciado pelo Strapi, rotas em português e inglês e um portal conectado aos serviços do projeto. A história e as imagens dão contexto antes do contato.",
+      "An editorial Next.js experience with Strapi-managed content, Portuguese and English routes and a portal connected to the project services. Story and imagery build context before contact.",
     ),
     techs: ["Next.js", "TypeScript", "Strapi", "PostgreSQL"],
     linkSite: "https://febraiotech.com",
@@ -34,7 +34,7 @@ export const projectsDetails = [
     title: "FebraioTech Shop",
     number: "02",
     kind: copy("E-commerce", "E-commerce"),
-    img: "/images/shop.webp",
+    img: "/images/febraio-shop.webp",
     imageStyle: "shop",
     summary: copy("Da descoberta à entrega.", "From discovery to delivery."),
     description: copy(
@@ -61,7 +61,7 @@ export const projectsDetails = [
       "Experiência digital · Serviços",
       "Digital experience · Services",
     ),
-    img: "/images/auzen.avif",
+    img: "/images/auzen-site.webp",
     imageStyle: "auzen",
     summary: copy(
       "O cuidado começa na experiência.",
@@ -163,10 +163,25 @@ export const projectsDetails = [
     github: "https://github.com/JRaamos/Sistema-de-Agendamento",
   },
 ];
+const projectOrder = [
+  "febraio-tech",
+  "auzen-pet-resort",
+  "timebubble",
+  "febraio-tech-shop",
+  "manual-dos-achados",
+  "sistema-de-agendamentos",
+];
+export const projectsDetails = projectOrder.map((slug, index) => ({
+  ...projectCatalog.find((project) => project.slug === slug)!,
+  number: String(index + 1).padStart(2, "0"),
+}));
 export type Project = (typeof projectsDetails)[number];
 export function findProject(id?: string) {
   // Preserve the scheduling case's original URL. Retired cases are not reassigned.
-  if (id === "0") return projectsDetails[5];
+  if (id === "0")
+    return projectsDetails.find(
+      (project) => project.slug === "sistema-de-agendamentos",
+    );
   return projectsDetails.find((project) => project.slug === id);
 }
 export const stack = [
@@ -204,23 +219,28 @@ export const stack = [
       "PostgreSQL",
       "MySQL",
       "Redis",
+      "REST APIs",
+      "Webhooks",
+      "Salesforce",
+      "OAuth",
     ],
   },
   {
-    title: copy("IA & integrações", "AI & integrations"),
+    title: copy("IA & machine learning", "AI & machine learning"),
     number: "03",
     description: copy(
-      "Sistemas que conversam. Busca semântica, automações e serviços conectados com propósito.",
-      "Systems that talk. Semantic search, automation and services connected with purpose.",
+      "Modelos, contexto e avaliação. Do machine learning ao fine-tuning de LLMs e à busca com RAG.",
+      "Models, context and evaluation. From machine learning to LLM fine-tuning and retrieval with RAG.",
     ),
     tools: [
       "OpenAI API",
       "RAG",
       "Qdrant",
-      "REST APIs",
-      "Webhooks",
-      "Salesforce",
-      "OAuth",
+      "Machine learning",
+      "Fine-tuning",
+      "LLMs",
+      "Embeddings",
+      "Model evaluation",
     ],
   },
   {

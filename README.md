@@ -27,7 +27,9 @@ O build verifica os tipos antes de gerar `dist/`. Os testes cobrem as seis pági
 
 - Projetos e tecnologias: `src/utils/projectsDetails.ts`.
 - Home e história: `src/pages/Home.tsx`.
-- Cases: `src/pages/ProjectDetails.tsx`.
+- Cases: `src/pages/ProjectDetails.tsx`; contexto, jornadas e decisões bilíngues em `src/utils/caseStudies.ts`.
+- Monograma JF com profundidade e animação CSS: `src/components/BrandMark.tsx`.
+- Logos das plataformas: Font Awesome Free Brands (CC BY 4.0), renderizados por `src/components/Icon.tsx`; https://fontawesome.com/license/free.
 - Layout e contato: `src/components/Layout.tsx`.
 - Identidade e responsividade: `src/index.css`.
 - Fontes locais e imagens: `public/`.

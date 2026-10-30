@@ -26,10 +26,10 @@ describe("Portfolio visitor journeys", () => {
         .map((el) => el.textContent),
     ).toEqual([
       "Febraio Tech",
-      "FebraioTech Shop",
       "Auzen Pet Resort",
-      "Manual dos Achados",
       "TimeBubble",
+      "FebraioTech Shop",
+      "Manual dos Achados",
       "Sistema de Agendamentos",
     ]);
     for (const project of projectsDetails)
@@ -83,7 +83,14 @@ describe("Portfolio visitor journeys", () => {
   it("makes all technology groups available without hidden tabs", () => {
     visit();
     expect(screen.queryByRole("tab")).toBeNull();
-    for (const technology of ["PostgreSQL", "AWS", "React Native", "Qdrant"])
+    for (const technology of [
+      "PostgreSQL",
+      "AWS",
+      "React Native",
+      "Qdrant",
+      "Fine-tuning",
+      "Machine learning",
+    ])
       expect(screen.getByText(technology)).toBeTruthy();
   });
   it("defaults to the light theme and persists an explicit dark choice", async () => {

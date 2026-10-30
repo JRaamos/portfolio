@@ -1,5 +1,7 @@
+import { Icon } from "../components/Icon";
+import { caseStudies } from "../utils/caseStudies";
 import { Link, useParams } from "react-router-dom";
-import { Arrow, Contact, Footer, Header } from "../components/Layout";
+import { Contact, Footer, Header } from "../components/Layout";
 import { useLocale } from "../context/Locale";
 import { usePageEffects } from "../hooks/usePageEffects";
 import {
@@ -11,6 +13,7 @@ import NotFound from "./NotFound";
 function CaseContent({ project }: { project: Project }) {
   const { locale, t } = useLocale();
   const pt = locale === "pt";
+  const study = caseStudies[project.slug];
   const next =
     projectsDetails[
       (projectsDetails.indexOf(project) + 1) % projectsDetails.length
@@ -27,7 +30,7 @@ function CaseContent({ project }: { project: Project }) {
       <main id="main">
         <section className="case-heading section-pad">
           <Link className="text-link" to="/#projects">
-            ← {pt ? "Todos os projetos" : "All projects"}
+            <Icon name="grid" /> {pt ? "Todos os projetos" : "All projects"}
           </Link>
           <div className="case-meta section-kicker">
             <span>CASE / {project.number}</span>
@@ -50,7 +53,7 @@ function CaseContent({ project }: { project: Project }) {
                 : pt
                   ? "Visitar projeto"
                   : "Visit project"}
-              <Arrow />
+              <Icon name={project.slug === "timebubble" ? "play" : "globe"} />
             </a>
             {project.github && (
               <a
@@ -60,7 +63,7 @@ function CaseContent({ project }: { project: Project }) {
                 rel="noreferrer"
               >
                 {pt ? "Ver código" : "View code"}
-                <Arrow />
+                <Icon name="github" />
               </a>
             )}
           </div>
@@ -81,7 +84,9 @@ function CaseContent({ project }: { project: Project }) {
             </p>
             <ul>
               {project.techs.map((tech) => (
-                <li key={tech}>{tech}</li>
+                <li key={tech}>
+                  <Icon name={tech} /> {tech}
+                </li>
               ))}
             </ul>
           </aside>
@@ -92,6 +97,7 @@ function CaseContent({ project }: { project: Project }) {
               </p>
               <h2>{t(project.summary)}</h2>
               <p>{t(project.challenge)}</p>
+              <p className="case-body">{t(study.context)}</p>
             </article>
             <article className="reveal">
               <p className="section-kicker">
@@ -102,7 +108,58 @@ function CaseContent({ project }: { project: Project }) {
                   ? "Da intenção à experiência."
                   : "From intention to experience."}
               </h2>
-              <p>{t(project.solution)}</p>
+              <p className="case-body">{t(project.solution)}</p>
+              <ol className="case-journey">
+                {study.journey.map((step, i) => (
+                  <li key={i}>
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <p>{t(step)}</p>
+                  </li>
+                ))}
+              </ol>
+            </article>
+            <article className="reveal case-decisions">
+              <p className="section-kicker">
+                03 / {pt ? "ESCOLHAS DE ENGENHARIA" : "ENGINEERING CHOICES"}
+              </p>
+              <h2>
+                {pt
+                  ? "O porquê por trás da solução."
+                  : "The thinking behind the solution."}
+              </h2>
+              {study.decisions.map((decision, i) => (
+                <div className="case-decision" key={i}>
+                  <h3>{t(decision.title)}</h3>
+                  <p>{t(decision.text)}</p>
+                </div>
+              ))}
+            </article>
+            {study.gallery && (
+              <figure
+                className={`case-gallery reveal ${study.gallery.mobile ? "is-mobile" : ""}`}
+              >
+                <img
+                  src={study.gallery.src}
+                  alt={t(study.gallery.caption)}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>{t(study.gallery.caption)}</figcaption>
+              </figure>
+            )}
+            <article className="case-learning reveal">
+              <p className="section-kicker">
+                04 /{" "}
+                {pt
+                  ? "O QUE LEVO DESSE PROJETO"
+                  : "WHAT I TAKE FROM THIS PROJECT"}
+              </p>
+              <h2>
+                {pt
+                  ? "Construir também é aprender."
+                  : "Building is also learning."}
+              </h2>
+              <p>{t(study.learning)}</p>
             </article>
           </div>
         </section>
@@ -110,10 +167,7 @@ function CaseContent({ project }: { project: Project }) {
           <span className="section-kicker">
             {pt ? "PRÓXIMO PROJETO" : "NEXT PROJECT"}
           </span>
-          <Link to={`/project/${next.slug}`}>
-            {next.title}
-            <Arrow />
-          </Link>
+          <Link to={`/project/${next.slug}`}>{next.title}</Link>
         </section>
         <Contact />
       </main>

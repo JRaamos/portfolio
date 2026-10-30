@@ -23,7 +23,7 @@ export default function NotFound() {
           <span>{pt ? "ainda não existe." : "does not exist yet."}</span>
         </h1>
         <Link to="/" className="button-primary">
-          {pt ? "Voltar ao início" : "Back to home"} ↗
+          {pt ? "Voltar ao início" : "Back to home"}
         </Link>
       </main>
       <Footer />

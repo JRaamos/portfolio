@@ -98,7 +98,6 @@ export default function ContactForm() {
           : pt
             ? "Enviar mensagem"
             : "Send message"}{" "}
-        <span aria-hidden="true">↗</span>
       </button>
     </form>
   );
